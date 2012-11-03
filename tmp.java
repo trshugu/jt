@@ -7,7 +7,6 @@ public static void main(String args[]){
 String[] strarr = null;
 //strarr.add("anoano");
 
-/* 
 // 参照型の確認
 StringBuilder sb = new StringBuilder().append("anokutara");
 StringBuilder ref = new StringBuilder();
@@ -19,7 +18,6 @@ System.out.println(ref);
 ref.append("tuika");
 System.out.println(sb);
 System.out.println(ref);
-*/
 
 
 /* 

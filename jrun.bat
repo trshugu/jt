@@ -1,2 +1,2 @@
-javac tmp.java
+javac -encoding utf-8 tmp.java
 java tmp
