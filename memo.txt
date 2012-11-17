@@ -17,3 +17,6 @@ http://java.keicode.com/"
 http://www.asahi-net.or.jp/~yf8k-kbys/newjava0.html"
 http://libro.tuyano.com/index2?id=4001"
 
+
+maven2のテスト
+mvn  archetype:create -DartifactId=mvntestprj -DgroupId=mvntestgroup
