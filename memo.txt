@@ -1,5 +1,6 @@
 
 
+2012/11/20 12:50
 maven2のテスト
 mvn archetype:create -DartifactId=mvntestprj -DgroupId=mvntestgroup
 mvn archetype:create -DartifactId=mytest     -DgroupId=jp.co.hogehoge
