@@ -6,9 +6,6 @@
   <target name="dist" >
     <javac srcdir="${basedir}" destdir="${basedir}" encoding="utf-8" classpath="C:/github/jt/log4j-1.2.17.jar;./" includeantruntime="false" />
     <java classname="tmp" classpath="C:/github/jt/log4j-1.2.17.jar;./" />
-    <!--war destfile="${war.home}/${app.name}.war" webxml="${app.name}/${webapp}/WEB-INF/web.xml">
-      <fileset dir="${app.name}/${webapp}" excludes="**/web.xml, **/env.txt" />
-    </war-->
   </target>
   
   <!-- classファイル削除 -->
