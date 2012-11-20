@@ -1,10 +1,13 @@
-public class tmp {
+package mvntestgroup;
+import org.apache.log4j.*;
+
+public class Tmp {
 public static void main(String args[]){
 /* 
 */
 
 // C:\github\jt\log4j-1.2.17.jar
-org.apache.log4j.Logger logtest = org.apache.log4j.Logger.getLogger(tmp.class);
+org.apache.log4j.Logger logtest = org.apache.log4j.Logger.getLogger(Tmp.class);
 org.apache.log4j.BasicConfigurator.configure();
 
 logtest.fatal("本当にやばいログ　　");

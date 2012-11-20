@@ -1,3 +1,5 @@
+import org.apache.log4j.*;
+
 public class tmp {
 public static void main(String args[]){
 /* 
