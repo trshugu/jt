@@ -1,8 +1,6 @@
 ◆inbox
 
 ◆action
-・jarの取扱い
-・フレームワークの確認
 
 ◆done
 ＊コンパイルできるようにする
@@ -16,5 +14,7 @@
 ＊日にちの制御→calendarクラス
 ＊リストの制御→linkedlist,arraylist,hashmapあたり
 ＊例外→ふつう
+＊フレームワークの確認
+＊jarの取扱い
 
 
