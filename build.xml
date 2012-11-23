@@ -4,8 +4,8 @@
 <!-- Antのテスト -->
 <project name="jt" default="dist" basedir="." >
   <target name="dist" >
-    <javac srcdir="${basedir}" destdir="${basedir}" encoding="utf-8" classpath="C:/github/jt/log4j-1.2.17.jar;./" includeantruntime="false" excludes = "mvntest/**"/>
-    <java classname="tmp" classpath="C:/github/jt/log4j-1.2.17.jar;./" />
+    <javac srcdir="${basedir}" destdir="${basedir}" encoding="utf-8" classpath="log4j-1.2.17.jar;./" includeantruntime="false" excludes = "mvntest/**"/>
+    <java classname="tmp" classpath="log4j-1.2.17.jar;./" />
   </target>
   
   <!-- classファイル削除 -->
