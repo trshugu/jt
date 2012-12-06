@@ -1,6 +1,7 @@
 ◆inbox
 
 ◆action
+・logbackを確認→log4jは古いとのことなので
 
 ◆done
 ＊コンパイルできるようにする

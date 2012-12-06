@@ -1,20 +1,32 @@
-import org.apache.log4j.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class tmp {
 public static void main(String args[]){
 /* 
 */
 
-// C:\github\jt\log4j-1.2.17.jar
-org.apache.log4j.Logger logtest = org.apache.log4j.Logger.getLogger(tmp.class);
-org.apache.log4j.BasicConfigurator.configure();
 
-logtest.fatal("本当にやばいログ　　");
+Logger logtest = LoggerFactory.getLogger("tmpp");
+logtest.debug("Hello Logger");
+
+//logtest.fatal("本当にやばいログ　　");
 logtest.error("普通にやばいログ　　");
 logtest.warn( "ちょっとやばいログ　");
 logtest.info( "運用時に必要なログ　");
 logtest.debug("開発時に必要なログ　");
 logtest.trace("デスマ時に必要なログ");
+
+
+
+
+/* 
+// log4jからlogbackへ
+import org.apache.log4j.*;
+// C:\github\jt\log4j-1.2.17.jar
+org.apache.log4j.Logger logtest = org.apache.log4j.Logger.getLogger(tmp.class);
+org.apache.log4j.BasicConfigurator.configure();
+*/
 
 
 /* 
