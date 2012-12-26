@@ -1,11 +1,22 @@
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+// junit-4.10.jar
 
 public class tmp {
 public static void main(String args[]){
 /* 
 */
 
+
+System.out.println("testest"+ "arar");
+
+
+
+
+
+
+/*
+// logback
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 Logger logtest = LoggerFactory.getLogger("tmpp");
 logtest.debug("Hello Logger");
@@ -16,8 +27,7 @@ logtest.warn( "ちょっとやばいログ　");
 logtest.info( "運用時に必要なログ　");
 logtest.debug("開発時に必要なログ　");
 logtest.trace("デスマ時に必要なログ");
-
-
+*/
 
 
 /* 
