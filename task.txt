@@ -1,9 +1,18 @@
-◆inbox
-
 ◆action
-・logbackを確認→log4jは古いとのことなので
+◆someday
+◆document
+=================================================
 
-◆done
+
+
+
+
+2012/11/20 12:50
+maven2のテスト
+mvn archetype:create -DartifactId=mvntestprj -DgroupId=mvntestgroup
+mvn archetype:create -DartifactId=mytest     -DgroupId=jp.co.hogehoge
+
+◆done===========================================
 ＊コンパイルできるようにする
 ＊コメントの記述方法
 ＊log4j javaの道
@@ -17,5 +26,6 @@
 ＊例外→ふつう
 ＊フレームワークの確認
 ＊jarの取扱い
+＊logbackを確認→log4jは古いとのことなので
 
 

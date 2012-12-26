@@ -1,13 +1,17 @@
-// junit-4.10.jar
-
 public class tmp {
+
+String plusplus(String str)
+{
+		String ret = str + "plus";
+		return ret;
+}
+
 public static void main(String args[]){
 /* 
 */
 
-
-System.out.println("testest"+ "arar");
-
+tmp teststr = new tmp();
+System.out.println(teststr.plusplus("oomoto"));
 
 
 
