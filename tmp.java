@@ -1,20 +1,23 @@
 public class tmp {
 
+public static void main(String args[]){
+/* 
+*/
+
+
+
+/* 
+// 参照型の確認
+
 String plusplus(String str)
 {
 		String ret = str + "plus";
 		return ret;
 }
 
-public static void main(String args[]){
-/* 
-*/
-
 tmp teststr = new tmp();
 System.out.println(teststr.plusplus("oomoto"));
-
-
-
+*/
 
 
 /*
