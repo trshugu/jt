@@ -1,9 +1,50 @@
 public class tmp {
 
 public static void main(String args[]){
-/* 
+/*
 */
 
+
+
+
+/*
+// java6以下ではエラーになる
+String ext = "one";
+
+final String one = "one";
+final String two = "two";
+
+switch (ext)
+{
+  case one:
+  		System.out.println("one");
+  break;
+  case two:
+  		System.out.println("two");
+  break;
+  default:
+  		System.out.println("default");
+  break;
+}
+*/
+
+/*
+// プリミティブ型でない参照型のShortではfinalをつけても定数にならないのでエラー
+short ext = 1;
+
+final Short one = 1;
+final Short two = 2;
+
+switch (ext)
+{
+  case one:
+  		System.out.println("one");
+  break;
+  case two:
+  		System.out.println("two");
+  break;
+}
+*/
 
 
 /* 
