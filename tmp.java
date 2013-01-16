@@ -6,6 +6,12 @@ public static void main(String args[]){
 
 
 
+/*
+// 前置のインクリメントと後置のインクリメント
+int i = 0;
+i = i++ + ++i;
+System.out.println(i);
+*/
 
 /*
 // java6以下ではエラーになる
