@@ -6,6 +6,34 @@ public static void main(String args[]){
 
 
 
+
+
+
+/*
+import java.util.*;
+
+interface Fn<A,B>
+{
+	B apply(A arg);
+}
+
+// Javaにおけるクロージャの例
+final int y = 2;
+List<Integer> result = new Fn<Integer, Fn<Integer, List<Integer>>>()
+{
+	public Fn<Integer, List<Integer>> apply(final Integer y)
+	{
+		return new Fn<Integer, List<Integer>>()
+		{
+			public List<Integer> apply(final Integer x) { return Arrays.asList(x, y); }
+		};
+	}
+}.apply(1).apply(0);
+
+System.out.println(result); // => [0, 1]
+*/
+
+
 /*
 // 前置のインクリメントと後置のインクリメント
 int i = 0;
