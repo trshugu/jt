@@ -11,6 +11,33 @@ public static void main(String args[]){
 
 
 /*
+// 数字4文字10000回生成
+java.util.HashSet set = new java.util.HashSet();
+
+int random1 = 0;
+int random2 = 0;
+int random3 = 0;
+int random4 = 0;
+java.util.Random r = new java.util.Random();
+
+int cnt = 0;
+while (cnt < 10000)
+{
+	System.out.println(cnt);
+	random1 = r.nextInt(10);
+	random2 = r.nextInt(10);
+	random3 = r.nextInt(10);
+	random4 = r.nextInt(10);
+	set.add(String.valueOf(random1) + String.valueOf(random2) + String.valueOf(random3) + String.valueOf(random4));
+	
+	cnt++;
+}
+
+System.out.println(set.size());
+*/
+
+
+/*
 // 二ヶ月前を取得
 java.util.Calendar now = java.util.Calendar.getInstance();
 System.out.println(now);
