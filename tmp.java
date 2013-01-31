@@ -4,10 +4,21 @@ public static void main(String args[]){
 /*
 */
 
-System.out.println("suakrasi");
 
 
 
+
+
+
+/*
+// 二ヶ月前を取得
+java.util.Calendar now = java.util.Calendar.getInstance();
+System.out.println(now);
+now.add(java.util.Calendar.MONTH, -2);
+System.out.println(now);
+java.sql.Timestamp date = new java.sql.Timestamp(now.getTimeInMillis());
+System.out.println(date);
+*/
 
 /*
 import java.util.*;
