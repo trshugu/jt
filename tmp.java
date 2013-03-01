@@ -1,5 +1,4 @@
 public class tmp {
-
 public static void main(String args[]){
 /*
 */
@@ -7,7 +6,25 @@ public static void main(String args[]){
 
 
 
+/*
+// gsonの確認
+import java.io.*;
+import com.google.gson.*;
+import com.google.gson.annotations.*;
+import com.google.gson.stream.*;
 
+static class BagOfPrimitives {
+  private int value1 = 1;
+  private String value2 = "abc";
+  private transient int value3 = 3;
+  BagOfPrimitives() {
+  }
+}
+
+Gson gson = new Gson();
+BagOfPrimitives obj = new BagOfPrimitives();
+System.out.println(gson.toJson( obj ));
+*/
 
 
 /*
