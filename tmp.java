@@ -6,6 +6,23 @@ public static void main(String args[]){
 
 
 
+
+
+/*
+// 特定の文字に挟まれた文字を抽出する
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+String target = "jibsgoalbsjijibsmorebsij";
+
+Pattern p =Pattern.compile("bs(.+?)bs");
+Matcher m =p.matcher(target);
+
+while(m.find()){
+  System.out.println( m.group(1) );
+}
+*/
+
 /*
 // gsonの確認
 import java.io.*;
