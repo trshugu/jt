@@ -8,6 +8,18 @@ public static void main(String args[]){
 
 
 
+
+
+
+/*
+// replaceは非破壊メソッドだったという初歩的ミス
+String reprep = "abcde";
+
+reprep.replace("c","z");
+System.out.println( reprep );
+System.out.println( reprep.replace("c","z") );
+*/
+
 /*
 // 特定の文字に挟まれた文字を抽出する
 import java.util.regex.Pattern;
