@@ -9,6 +9,13 @@ public static void main(String args[]){
 
 
 
+/*
+// java8記念 lambda式の試し書き
+import java.util.function.Function;
+
+Function<String, Integer> func = x -> 2;
+System.out.println( func.apply("aa") );
+*/
 
 
 /*
