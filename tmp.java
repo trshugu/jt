@@ -1,4 +1,5 @@
 public class tmp {
+
 public static void main(String args[]){
 /*
 */
@@ -8,6 +9,12 @@ public static void main(String args[]){
 
 
 
+/*
+// junit4の試し書き
+String yon(String aa){
+  return aa;
+}
+*/
 
 /*
 // java8記念 lambda式の試し書き

@@ -1,6 +1,6 @@
 @echo off
-javac -encoding utf-8 tmp.java -classpath C:\github\jt\jar\*;./
-java -classpath C:\github\jt\jar\*;./ tmp
+javac -encoding utf-8 tmptest.java -classpath C:\github\jt\legacytest\jar\*;./
+java -classpath C:\github\jt\legacytest\jar\*;./ org.junit.runner.JUnitCore tmptest
 
 
 
