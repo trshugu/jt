@@ -7,7 +7,73 @@ public static void main(String args[]){
 
 
 
+/*
+// sbと+の速度の比較で多いほう
 
+// +の場合
+long start = System.currentTimeMillis();
+int cnt = 0;
+while (cnt < 100000000)
+{
+String sql = "";
+sql = " SELECT "
+    +  " TSV_ID, "
+    +  " COORDINAT_ID, "
+    +  " MAIL_ADDRESS_TO, "
+    +  " MAIL_ADDRESS_CC, "
+    +  " MAIL_ADDRESS_BCC, "
+    +  " LPAD(DELIVERY_TIME,6,0) DELIVERY_TIME, "
+    +  " MAIL_ADDRESS_FROM, "
+    +  " SUBJECT, "
+    +  " HEADER, "
+    +  " TEXT, "
+    +  " FOOTER "
+    + " FROM "
+    +  " SEND_RANKING_MAIL_MANAGE "
+    + " WHERE "
+    + "  LPAD(DELIVERY_TIME,6,0) <=  "
+    + " ORDER BY "
+    +  " TSV_ID ";
+cnt++;
+}
+long end = System.currentTimeMillis();
+long i = end - start;
+
+
+
+// sbの場合
+long startsb = System.currentTimeMillis();
+int cntsb = 0;
+while (cntsb < 100000)
+{
+StringBuilder sbl = new StringBuilder();
+sbl.append(" SELECT ")
+.append( " TSV_ID, ")
+.append( " COORDINAT_ID, ")
+.append( " MAIL_ADDRESS_TO, ")
+.append( " MAIL_ADDRESS_CC, ")
+.append( " MAIL_ADDRESS_BCC, ")
+.append( " LPAD(DELIVERY_TIME,6,0) DELIVERY_TIME, ")
+.append( " MAIL_ADDRESS_FROM, ")
+.append( " SUBJECT, ")
+.append( " HEADER, ")
+.append( " TEXT, ")
+.append( " FOOTER ")
+.append(" FROM ")
+.append( " SEND_RANKING_MAIL_MANAGE ")
+.append(" WHERE ")
+.append("  LPAD(DELIVERY_TIME,6,0) <=  ")
+.append(" ORDER BY ")
+.append( " TSV_ID ");
+cntsb++;
+}
+long endsb = System.currentTimeMillis();
+long isb = endsb - startsb;
+
+
+System.out.println(i);
+System.out.println(isb);
+*/
 
 /*
 // junit4の試し書き
