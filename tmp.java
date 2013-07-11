@@ -1,11 +1,122 @@
 public class tmp {
-
 public static void main(String args[]){
 /*
 */
 
 
 
+/*
+import java.io.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.*;
+import org.xml.sax.*;
+
+try
+{
+  DocumentBuilderFactory factory  = DocumentBuilderFactory.newInstance();
+  DocumentBuilder builder = factory.newDocumentBuilder();
+
+  File f = new File( "test.xml" );
+  Document doc = builder.parse( f );
+  Element root = doc.getDocumentElement();
+  NodeList children = root.getChildNodes();
+
+  for( int i=0; i<children.getLength(); i++ )
+  {
+    Node child = children.item(i);
+    
+    if( child instanceof Element )
+    {
+       Element childElement = (Element) child;
+       System.out.println( childElement.getTagName() );
+    }
+  }
+}
+catch( ParserConfigurationException e ) {}
+catch( SAXException e ) {}
+catch( IOException e ) {}
+*/
+
+
+
+
+/*
+import org.dom4j.Document;
+import org.dom4j.DocumentHelper;
+import org.dom4j.Element;
+
+// dom4j
+Document document = DocumentHelper.createDocument();
+Element root = document.addElement( "messages" );
+Element me = root.addElement( "message" ).addAttribute( "attr", "A message" ).addText( "message" );
+System.out.println(root);
+*/
+
+/*
+import java.io.*;
+import org.jdom.Element;
+import org.jdom.Document;
+import org.jdom.JDOMException;
+import org.jdom.input.SAXBuilder;
+
+// xmlパース(json)ない
+try
+{
+  Document doc = new SAXBuilder().build( new File("test.xml") );
+  Element root = doc.getRootElement();
+}
+catch (JDOMException e)
+{
+  System.out.println(e);
+}
+*/
+
+
+/*
+import java.io.*;
+import javax.xml.parsers.*;
+import org.xml.sax.*;
+import org.xml.sax.helpers.*;
+// 割と面倒め
+// xmlパース(sax)
+try
+{
+  SAXParserFactory spfactory = SAXParserFactory.newInstance();
+  SAXParser parser = spfactory.newSAXParser();
+  // XMLファイルを指定されたデフォルトハンドラーで処理します
+  parser.parse(new File("test.xml"), new tmp());
+}
+catch (Exception e)
+{
+  e.printStackTrace();
+}
+
+public void characters(char[] ch, int offset, int length)
+{
+  System.out.println("テキストデータ：" + new String(ch, offset, length));
+}
+*/
+
+/*
+// xmlパース(dom)
+import java.io.*;
+import javax.xml.parsers.*;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+try
+{
+  DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
+  DocumentBuilder builder = dbfactory.newDocumentBuilder();
+  Document doc = builder.parse(new File("test.xml"));
+  Element root = doc.getDocumentElement();
+  System.out.println(root.getFirstChild().getNodeValue());
+}
+catch(Exception e)
+{
+  e.printStackTrace();
+}
+*/
 
 /*
 // sbと+の速度の比較で多いほう
