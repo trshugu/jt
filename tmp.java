@@ -1,8 +1,38 @@
+
 public class tmp {
 public static void main(String args[]){
 /*
 */
 
+
+
+
+/*
+import org.w3c.dom.Document;
+import org.xml.sax.InputSource;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import java.io.StringReader;
+import javax.xml.xpath.*;
+
+// xmlパーステスト
+String xml = "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\" xmlns:dc=\"http://purl.org/dc/elements/1.1/\" xmlns:taxo=\"http://purl.org/rss/1.0/modules/taxonomy/\" version=\"2.0\">tetete</rss>";
+try
+{
+  DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+  DocumentBuilder db = dbf.newDocumentBuilder();
+  InputSource is = new InputSource(new StringReader(xml));
+  Document doc = db.parse(is);
+  
+  XPathFactory factory = XPathFactory.newInstance();
+  XPath xpath = factory.newXPath();
+  XPathExpression expr = xpath.compile("//rss/text()");
+  Object result = expr.evaluate(doc, XPathConstants.STRING);
+  
+  System.out.println(result);
+}
+catch(Exception ex){}
+*/
 
 
 /*
