@@ -154,27 +154,27 @@ catch(Exception e)
 // +の場合
 long start = System.currentTimeMillis();
 int cnt = 0;
-while (cnt < 100000000)
+while (cnt < 100000)
 {
 String sql = "";
-sql = " SELECT "
-    +  " TSV_ID, "
-    +  " COORDINAT_ID, "
-    +  " MAIL_ADDRESS_TO, "
-    +  " MAIL_ADDRESS_CC, "
-    +  " MAIL_ADDRESS_BCC, "
-    +  " LPAD(DELIVERY_TIME,6,0) DELIVERY_TIME, "
-    +  " MAIL_ADDRESS_FROM, "
-    +  " SUBJECT, "
-    +  " HEADER, "
-    +  " TEXT, "
-    +  " FOOTER "
-    + " FROM "
-    +  " SEND_RANKING_MAIL_MANAGE "
-    + " WHERE "
-    + "  LPAD(DELIVERY_TIME,6,0) <=  "
-    + " ORDER BY "
-    +  " TSV_ID ";
+sql += " SELECT ";
+sql += " TSV_ID, ";
+sql += " COORDINAT_ID, ";
+sql += " MAIL_ADDRESS_TO, ";
+sql += " MAIL_ADDRESS_CC, ";
+sql += " MAIL_ADDRESS_BCC, ";
+sql += " LPAD(DELIVERY_TIME,6,0) DELIVERY_TIME, ";
+sql += " MAIL_ADDRESS_FROM, ";
+sql += " SUBJECT, ";
+sql += " HEADER, ";
+sql += " TEXT, ";
+sql += " FOOTER ";
+sql += " FROM ";
+sql += " SEND_RANKING_MAIL_MANAGE ";
+sql += " WHERE ";
+sql += "  LPAD(DELIVERY_TIME,6,0) <=  ";
+sql += " ORDER BY ";
+sql += " TSV_ID ";
 cnt++;
 }
 long end = System.currentTimeMillis();
