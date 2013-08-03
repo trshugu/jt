@@ -1,0 +1,99 @@
+<HTML>
+  <HEAD>
+    <TITLE>
+    Graph24jc.class
+    </TITLE>
+    <style type="text/css">
+      body  {font-size: 9pt;}
+    </style>    
+  </HEAD>
+  <BODY>
+    <CENTER>
+      <H1>Graph24jc.class</H1>
+      <HR>
+        <APPLET CODE="Graph24jc.class" WIDTH=400 HEIGHT=400>
+        <PARAM NAME=graphheight VALUE="100">
+        <PARAM NAME=xbarnum VALUE="8">
+        <PARAM NAME=gv1str VALUE="歯周病疾患チャート">
+        <!--PARAM NAME=xbar VALUE="飲食・歯磨き_口腔内の様子_生活習慣_禁煙の状況_CPIコード_炎症検査_出血検査_P.g菌数"-->
+        <PARAM NAME=xbar VALUE="飲食・歯磨き_口腔内の様子_生活習慣_禁煙の状況_CPIコード_炎症検査_出血検査_P.g菌数">
+        <PARAM NAME=ybar VALUE="4_3_2_1_0">
+        <PARAM NAME=dotbar VALUE="3_2_1_0">
+        <PARAM NAME=graphvalue1 VALUE="2_0_0_0_1_0_0_0">
+        <PARAM NAME=fgc VALUE="000000">
+        <PARAM NAME=bgc VALUE="f9f9ff">
+        <PARAM NAME=fontcolor VALUE="000000">
+        <PARAM NAME=barcolor1 VALUE="000000">
+        <PARAM NAME=pattern VALUE="2">
+        <PARAM NAME=image VALUE="chart400.jpg">
+        </APPLET>
+      <HR>
+      HTMLの書き方<BR>
+    </CENTER>
+    &lt;APPLET CODE="Graph24jc.class" WIDTH=300 HEIGHT=300>ファイル名と大きさを指定<BR>
+    &lt;PARAM NAME=graphheight VALUE="100">グラフの軸の高さを指定<BR>
+    &lt;PARAM NAME=xbarnum VALUE="6">目盛りの軸の本数を指定<BR>
+    &lt;PARAM NAME=gv1str VALUE="Value1">一つ目のグラフの名前を指定<BR>
+    &lt;PARAM NAME=gv2str VALUE="2ndLine">二つ目のグラフの名前を指定<BR>
+    &lt;PARAM NAME=xbar VALUE="000_111_222_333_444_555">軸の名前を指定<BR>
+    &lt;PARAM NAME=ybar VALUE="-6_0_5_10_12.5_20">目盛りの数値を指定<BR>
+    &lt;PARAM NAME=dotbar VALUE="0_10_20">点線の位置を指定<BR>
+    &lt;PARAM NAME=graphvalue1 VALUE="20_10_5_0_5_10">一つ目のグラフの数値を指定<BR>
+    &lt;PARAM NAME=graphvalue2 VALUE="0_5_10_20_10_5">二つ目のグラフの数値を指定<BR>
+    &lt;PARAM NAME=fgc VALUE="000000">目盛りの色を指定<BR>
+    &lt;PARAM NAME=bgc VALUE="f9f9ff">背景の色を指定<BR>
+    &lt;PARAM NAME=fontcolor VALUE="ff0000">文字の色を指定<BR>
+    &lt;PARAM NAME=barcolor1 VALUE="ffff00">一つ目のグラフの色を指定<BR>
+    &lt;PARAM NAME=barcolor2 VALUE="00ffff">二つ目のグラフの色を指定<BR>
+    &lt;PARAM NAME=pattern VALUE="0">表示のパターンを指定。0=縁なし、1=縁あり、2=縁のみ<BR>
+    &lt;/APPLET><BR>
+    <HR>
+    注意:<BR>
+    数値等の指定は最上部から時計回りになります<BR>
+    グラフの線は最大31本まで、軸は100個までです。<BR>
+    グラフの線は1本目からあいだを空けずに指定してください。<BR>
+    ybarは最初の数値がY軸の最小値、最後が最大値になります<BR>
+    オプション：<BR>
+    &lt;PARAM NAME=p0x VALUE="xxx">グラフの中央の座標<BR>
+    &lt;PARAM NAME=p0y VALUE="yyy"><BR>
+    　グラフの中央の位置を変更できます。デフォルトでは画面の中央に設定されています。<BR>
+    &lt;PARAM NAME=image VALUE="画像ファイル名">背景に画像を張りつけます<BR>
+    &lt;PARAM NAME=title VALUE="タイトル"><BR>
+    　アプレットの上中央にタイトルを表示します<BR>
+    &lt;PARAM NAME=barimg1 VALUE="画像ファイル名"><BR>
+    　一番目のグラフに画像を貼り付けます。二番目以降のグラフに貼り付けたいときはNAMEをbarimg2、barimg3…としてください<BR>
+    <BR>
+    　フォントを変更したいときは次のタグを追加してください<BR>
+    &lt;PARAM NAME=fontsize VALUE="フォントの大きさ"><BR>
+    &lt;PARAM NAME=fontname VALUE="フォントの名前を番号で指定"><BR>
+    &lt;PARAM NAME=fontstyle VALUE="フォントのスタイルを番号で指定"><BR>
+    フォントの名前<BR>
+    <TABLE BORDER>
+      <TR><TD>番号</TD><TD>名前</TD></TR>
+      <TR><TD>0</TD><TD>Dialog</TD></TR>
+      <TR><TD>1</TD><TD>DialogInput</TD></TR>
+      <TR><TD>2</TD><TD>Monospaced</TD></TR>
+      <TR><TD>3</TD><TD>Serif</TD></TR>
+      <TR><TD>4</TD><TD>SansSerif</TD></TR>
+      <TR><TD>5</TD><TD>Symbol</TD></TR>
+    </TABLE>
+    <BR>
+    フォントのスタイル<BR>
+    <TABLE BORDER>
+      <TR><TD>番号</TD><TD>スタイル</TD></TR>
+      <TR><TD>0</TD><TD>PLAIN</TD></TR>
+      <TR><TD>1</TD><TD>BOLD</TD></TR>
+      <TR><TD>2</TD><TD>ITALIC</TD></TR>
+      <TR><TD>3</TD><TD>ITALIC+BOLD</TD></TR>
+    </TABLE>
+
+    <HR>
+    <TABLE BORDER>
+      <TR>
+        <TD>ダウンロード</TD>
+        <TD><A HREF="zip/graph24jc.zip">graph24jc.zip</A></TD>
+      </TR>
+    </TABLE>
+
+  </BODY>
+</HTML>

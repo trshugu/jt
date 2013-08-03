@@ -1,0 +1,28 @@
+ρ(￣∇￣o) ｺﾚを見て。
+http://java-house.jp/ml/archive/j-h-b/019996.html#body
+
+
+GIFEncoderは以下のサイトからダウンロードできます。
+http://www.acme.com/java/software/Acme.JPM.Encoders.GifEncoder.html
+
+ソースはこんな感じで。
+
+        Image img;
+        String saveFileName;
+        GifEncoder gif;
+        FileOutputStream foutStream;
+
+        try{
+            foutStream = new FileOutputStream(saveFileName);
+            gif = new GifEncoder(img,foutStream);
+            gif.encode();
+            foutStream.close();
+        }catch(IOException e){}
+
+
+
+****************************************
+
+ File fw = new File(strOutPutPath);
+BufferedImage image = ImageIO.read(new URL(strCopyPage));
+ImageIO.write(image, "拡張子", fw); 
