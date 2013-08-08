@@ -6,6 +6,22 @@ public class tmptest {
 /*
 */
 
+@Test public void testOperator() {
+  tmp ttest = new tmp();
+  assertEquals(ttest.kalk(6,3,tmp.Operator.Plus),11);
+  assertEquals(ttest.kalk(6,3,tmp.Operator.Minus),1);
+  assertEquals(ttest.kalk(6,3,tmp.Operator.Multiplication),30);
+  assertEquals(ttest.kalk(6,3,tmp.Operator.Division),1);
+}
+
+@Test public void testAbsolute() {
+  tmp ttest = new tmp();
+  assertEquals(ttest.kalk(2,4,tmp.Operator.Minus),1);
+  assertEquals(ttest.kalk(4,2,tmp.Operator.Minus),1);
+}
+
+
+/*
 // junit4系の書き方に修正
 @Test public void newtest() {
   System.out.println( "newew" );
@@ -20,6 +36,7 @@ public class tmptest {
   assertEquals(1,1);
   assertEquals(testsst.yon("aa"),"aa");
 }
+*/
 
 /* 
 public void test_わかりやすい名前() {
