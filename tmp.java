@@ -1,6 +1,21 @@
 
 public class tmp {
+public static void main(String args[]) {
+/*
+*/
 
+
+/*
+// Unicode半角カタカナのコード範囲か？
+String test = "ｲest";
+Character oo = test.charAt(0);
+boolean a = (oo instanceof Character);
+System.out.println( oo.compareTo(new Character((char)0xff66)) );
+*/
+
+
+/*
+// 計算機
 enum Operator { Plus, Minus, Multiplication, Division ;}
 
 public int Matchstick(int i){
@@ -49,9 +64,6 @@ public int kalk(int x, int y, Operator operator) {
   return 0;
 }
 
-
-public static void main(String args[]){
-/*
 */
 
 
