@@ -5,6 +5,52 @@ public static void main(String args[]) {
 */
 
 
+
+
+/*
+// try-with-resources Statement
+try (BufferedReader br =  new BufferedReader(new FileReader("./test.xml"))) 
+{
+  String str;
+  while((str = br.readLine()) != null)
+  {
+    System.out.println( str );
+  }
+}
+catch(Exception e)
+{
+  System.out.println(e);
+}
+*/
+
+/*
+// nullという文字が出力される
+String aa = "asdf{0}";
+MessageFormat f = new MessageFormat(aa);
+String bb = f.format(new String[]{null} );
+
+System.out.println( bb );
+*/
+
+/*
+// n個までのイテレーションはforeachではダメか・・・
+ArrayList<String> l = new ArrayList<String>();
+l.add("adsf");
+l.add("cccc");
+l.add("eeeree");
+
+//Iterator<String> i = l.iterator();
+//for(int x = 0; i.hasNext() && x < 2; x++){
+//  System.out.println( i.next() );
+//}
+
+for(String s : l.subList(0,6)){
+  System.out.println( s );
+}
+*/
+
+
+
 /*
 // Unicode半角カタカナのコード範囲か？
 String test = "ｲest";
