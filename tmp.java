@@ -4,7 +4,16 @@ public static void main(String args[]) {
 /*
 */
 
+/*
+// nullという文字が出力されるその2
+System.out.println( "asdf" + null );
 
+StringBuilder sb = new StringBuilder();
+sb.append("asdf");
+sb.append("asdf");
+sb.append((String)null); // Stringをキャストすれば入る
+System.out.println( sb );
+*/
 
 
 /*
