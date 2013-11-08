@@ -1,8 +1,51 @@
+//import org.apache.commons.beanutils.BeanMap;
+import java.util.*;
+import org.apache.commons.lang3.tuple.*;
+import org.seasar.framework.beans.util.BeanMap;
+import org.seasar.framework.beans.util.BeanUtil;
 
 public class tmp {
 public static void main(String args[]) {
 /*
 */
+
+
+
+
+
+
+/*
+// import org.apache.commons.beanutils.BeanMap;と
+// import org.seasar.framework.beans.util.BeanMap;は
+// 挙動が違う(putがつかえん)
+//List<BeanMap> checkList = new ArrayList<BeanMap>();
+//HashMap<String, Object> excelmap = null;
+
+//BeanMap bm = Beans.createAndCopy(BeanMap.class, "aaa").execute();
+
+BeanMap setMap = new BeanMap();
+setMap.put("test", "asdf");
+//Beans a = new Beans("test");
+//setMap.setBean(a);
+//Beans b = new Beans();
+//b.set("test", "objext");
+//checkList.add(setMap);
+
+//for (BeanMap bp : checkList){
+  //System.out.println( setMap.get("test") );
+  System.out.println( setMap.keySet() );
+//}
+
+System.out.println( setMap.size() );
+
+
+//excelmap = new HashMap<String, Object>();
+//excelmap.put("checkList", checkList);
+//for (Map.Entry<String, Object> e : excelmap.entrySet()) {
+//  //System.out.println( "key=" + e.getKey() + ", value=" + e.getValue() );
+//}
+*/
+
 
 /*
 // nullという文字が出力されるその2
