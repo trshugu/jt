@@ -1,18 +1,27 @@
-//import org.apache.commons.beanutils.BeanMap;
 import java.util.*;
-import org.apache.commons.lang3.tuple.*;
-import org.seasar.framework.beans.util.BeanMap;
-import org.seasar.framework.beans.util.BeanUtil;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import com.mysql.jdbc.*;
+import org.gjt.mm.mysql.Driver;
+import com.jenkov.db.PersistenceManager;
+import com.jenkov.db.itf.IDaos;
 
 public class tmp {
 public static void main(String args[]) {
 /*
 */
 
-
-
-
-
+// Butterfly Persistance
+Class.forName("org.gjt.mm.mysql.Driver");
+try{
+  Class.forName("com.mysql.jdbc.Driver");
+  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tmp?user=root&password=12121212");
+} catch  (SQLException ex) {
+  System.out.println("SQLException: " + ex.getMessage());
+  System.out.println("SQLState: " + ex.getSQLState());
+  System.out.println("VendorError: " + ex.getErrorCode());
+}
 
 /*
 // import org.apache.commons.beanutils.BeanMap;と
