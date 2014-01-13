@@ -1,4 +1,5 @@
 import java.util.*;
+/*
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -6,12 +7,11 @@ import com.mysql.jdbc.*;
 import org.gjt.mm.mysql.Driver;
 import com.jenkov.db.PersistenceManager;
 import com.jenkov.db.itf.IDaos;
+*/
 
 public class tmp {
 public static void main(String args[]) {
 /*
-*/
-
 // Butterfly Persistance
 Class.forName("org.gjt.mm.mysql.Driver");
 try{
@@ -22,6 +22,9 @@ try{
   System.out.println("SQLState: " + ex.getSQLState());
   System.out.println("VendorError: " + ex.getErrorCode());
 }
+*/
+
+
 
 /*
 // import org.apache.commons.beanutils.BeanMap;と
@@ -170,8 +173,8 @@ public int kalk(int x, int y, Operator operator) {
   }
   return 0;
 }
-
 */
+
 
 
 

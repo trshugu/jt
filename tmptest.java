@@ -6,6 +6,15 @@ public class tmptest {
 /*
 */
 
+
+/*
+@Test public void testJuni() {
+  assert(true);
+}
+*/
+
+
+/*
 @Test public void testOperator() {
   tmp ttest = new tmp();
   assertEquals(ttest.kalk(6,3,tmp.Operator.Plus),11);
@@ -19,6 +28,7 @@ public class tmptest {
   assertEquals(ttest.kalk(2,4,tmp.Operator.Minus),1);
   assertEquals(ttest.kalk(4,2,tmp.Operator.Minus),1);
 }
+*/
 
 
 /*
