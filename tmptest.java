@@ -3,8 +3,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class tmptest {
+@Test public void test_reachability_confirmation() { assert(true); }
 /*
 */
+
+
+
 
 
 /*

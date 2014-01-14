@@ -1,8 +1,5 @@
 import java.util.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 /*
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -466,14 +463,14 @@ java.util.Random r = new java.util.Random();
 int cnt = 0;
 while (cnt < 10000)
 {
-	System.out.println(cnt);
-	random1 = r.nextInt(10);
-	random2 = r.nextInt(10);
-	random3 = r.nextInt(10);
-	random4 = r.nextInt(10);
-	set.add(String.valueOf(random1) + String.valueOf(random2) + String.valueOf(random3) + String.valueOf(random4));
-	
-	cnt++;
+  System.out.println(cnt);
+  random1 = r.nextInt(10);
+  random2 = r.nextInt(10);
+  random3 = r.nextInt(10);
+  random4 = r.nextInt(10);
+  set.add(String.valueOf(random1) + String.valueOf(random2) + String.valueOf(random3) + String.valueOf(random4));
+  
+  cnt++;
 }
 
 System.out.println(set.size());
@@ -495,20 +492,20 @@ import java.util.*;
 
 interface Fn<A,B>
 {
-	B apply(A arg);
+  B apply(A arg);
 }
 
 // Javaにおけるクロージャの例
 final int y = 2;
 List<Integer> result = new Fn<Integer, Fn<Integer, List<Integer>>>()
 {
-	public Fn<Integer, List<Integer>> apply(final Integer y)
-	{
-		return new Fn<Integer, List<Integer>>()
-		{
-			public List<Integer> apply(final Integer x) { return Arrays.asList(x, y); }
-		};
-	}
+  public Fn<Integer, List<Integer>> apply(final Integer y)
+  {
+    return new Fn<Integer, List<Integer>>()
+    {
+      public List<Integer> apply(final Integer x) { return Arrays.asList(x, y); }
+    };
+  }
 }.apply(1).apply(0);
 
 System.out.println(result); // => [0, 1]
@@ -532,13 +529,13 @@ final String two = "two";
 switch (ext)
 {
   case one:
-  		System.out.println("one");
+      System.out.println("one");
   break;
   case two:
-  		System.out.println("two");
+      System.out.println("two");
   break;
   default:
-  		System.out.println("default");
+      System.out.println("default");
   break;
 }
 */
@@ -553,10 +550,10 @@ final Short two = 2;
 switch (ext)
 {
   case one:
-  		System.out.println("one");
+      System.out.println("one");
   break;
   case two:
-  		System.out.println("two");
+      System.out.println("two");
   break;
 }
 */
@@ -567,8 +564,8 @@ switch (ext)
 
 String plusplus(String str)
 {
-		String ret = str + "plus";
-		return ret;
+    String ret = str + "plus";
+    return ret;
 }
 
 tmp teststr = new tmp();
@@ -577,7 +574,6 @@ System.out.println(teststr.plusplus("oomoto"));
 
 
 /*
-*/
 // logback
 
 Logger logtest = LoggerFactory.getLogger("tmpp");
@@ -589,6 +585,7 @@ logtest.warn( "ちょっとやばいログ　");
 logtest.info( "運用時に必要なログ　");
 logtest.debug("開発時に必要なログ　");
 logtest.trace("デスマ時に必要なログ");
+*/
 
 
 /* 
