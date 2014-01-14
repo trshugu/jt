@@ -7,9 +7,52 @@ public class tmp {public static void main(String args[]) {
 
 
 /*
-*/
-public class tmp {public static void main(String args[]) {
+import java.sql.*;
+import java.util.*;
+import com.jenkov.db.PersistenceManager;
+import com.jenkov.db.itf.IDaos;
+
+public class tmp {public static void main(String args[]) throws Exception {
+// Butterfly Persistance
+try{
+  Class.forName("org.mariadb.jdbc.Driver");
+  //Class.forName("com.mysql.jdbc.Driver");
+  Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/tmp?user=root&password=12121212");
+  
+  //Statement  st = con.createStatement();
+  PersistenceManager manager = new PersistenceManager();
+  IDaos daos = manager.createDaos(con);
+  List list = daos.getMapDao().readMapList("select * from btf");
+  //System.out.println(list);
+  for(Object s : list){
+    //System.out.println( s );
+  }
+  
+  btf btfi = new btf();
+  //挿入
+  daos.getObjectDao().insert(btfi);
+  //検索
+  List<btf> btfis = daos.getObjectDao().readList(btf.class, "select * from btf where id = ?", 1);
+  for(btf u : btfis){
+    System.out.println(u.getId() + ":" + u.getName());
+  }
+  btfi = btfis.get(0);
+  //更新
+  //daos.getObjectDao().update(btfi);
+  //削除
+  //daos.getObjectDao().delete(btfi);  
+} catch  (SQLException ex) {
+  System.out.println("SQLException: " + ex.getMessage());
+  System.out.println("SQLState: " + ex.getSQLState());
+  System.out.println("VendorError: " + ex.getErrorCode());
+} catch(ClassNotFoundException e) {
+  System.out.println(e);
+} catch(Exception e) {
+  System.out.println(e);
+}
+
 }}
+*/
 
 
 
