@@ -7,6 +7,31 @@ public class tmp {public static void main(String args[]) {
 
 
 /*
+// 空文字が通る事象があった
+public class tmp {public static void main(String args[]) {
+
+String ValId1 = "";
+
+String[] Val1 = ValId1.split(",");
+
+for (int i = 0; i < Val1.length; i++)
+{
+  if (Val1[i] != "")
+  {
+    System.out.println("ttt");
+    System.out.println( Val1[i] );
+  }
+  else
+  {
+    System.out.println("false");
+  }
+}
+
+}}
+*/
+
+
+/*
 import java.sql.*;
 import java.util.*;
 import com.jenkov.db.PersistenceManager;
