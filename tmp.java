@@ -5,6 +5,13 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+*/
+public class tmp {public static void main(String args[]) {
+  Integer i = 3;
+  System.out.println(i.hashCode());
+}}
+
 
 /*
 // 空文字が通る事象があった
