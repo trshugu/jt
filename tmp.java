@@ -1,16 +1,50 @@
 /*
+*/
 public class tmp {public static void main(String args[]) {
 }}
-*/
 
 
 
 /*
+// インターフェース
+class One{ 
+  public void to(An d) {
+    d.s();
+  }
+}
+
+interface An{
+  public void s();
+}
+
+class Da implements An{
+  public void s(){System.out.println("aaaa");}
+}
+
+class Du implements An{
+  public void s(){System.out.println("uuuuuu");}
+}
+
+
+
+public class tmp {public static void main(String args[]) {
+  One o = new One();
+  Da a = new Da();
+  Du u = new Du();
+  
+  o.to(a);
+  o.to(u);
+  
+  System.out.println("asdf");
+}}
 */
+
+/*
 public class tmp {public static void main(String args[]) {
   Integer i = 3;
   System.out.println(i.hashCode());
 }}
+*/
 
 
 /*
