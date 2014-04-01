@@ -1,7 +1,92 @@
 /*
-*/
 public class tmp {public static void main(String args[]) {
 }}
+*/
+
+
+
+
+
+/*
+// いけてないMD5の調査
+import java.io.*;
+import java.text.*;
+import java.security.MessageDigest;
+
+public class tmp {
+  public static void main(String args[])
+  {
+    //System.out.println("aaaa");
+    System.out.println(getHashCode("aaaa"));
+    //System.out.println(String2MD5("aaaa"));
+    //System.out.println("0" + Integer.toHexString(0xFF & 0xe5) );
+    //"0" + Integer.toHexString((0xFF & hash[i])
+  }
+  
+  public static String getHashCode(String text)
+  {
+    //ダイジェストにデータを追加
+    byte[] hash = null;
+    MessageDigest md = null;
+    try
+    {
+      md = MessageDigest.getInstance("MD5");
+      md.update(text.getBytes());
+      hash = md.digest();
+    }
+    catch (Exception e){}
+    
+    //バイト文字列をStringBufferに追加して文字列を生成
+    StringBuffer stb = new StringBuffer();
+    for (int i = 0; i < hash.length; i++)
+    {
+      //int in = Math.abs((int)hash[i]);
+      //stb.append(Integer.toString(in, 16));
+      // 正しくはこう書く
+      stb.append( ((0xff & (int)hash[i]) < 0x10 ) ? "0" : "" );
+      stb.append(Integer.toHexString(0xff & (int)hash[i]));
+      //System.out.println(Integer.toHexString(0xff & (int)hash[i]));
+      
+      //System.out.println(Integer.toString(in, 16));
+      //System.out.println(Integer.toString((int)hash[i], 16));
+    }
+    
+    return stb.toString();
+  }
+
+  public static String String2MD5(String key)
+  {
+    byte[] hash = null;
+    MessageDigest md;
+    try
+    {
+      md = MessageDigest.getInstance("MD5");
+      md.update(key.getBytes());
+      hash = md.digest();
+    } catch (Exception e) {}
+      
+    return hashByte2MD5(hash);
+  }
+  
+  public static String hashByte2MD5(byte []hash)
+  {
+    StringBuffer hexString = new StringBuffer();
+    for (int i = 0; i < hash.length; i++)
+    {
+      // 16未満のときは0を付与する
+      if ((0xff & hash[i]) < 0x10)
+      {
+        hexString.append("0" + Integer.toHexString((0xFF & hash[i])));
+      }
+      else
+      {
+        hexString.append(Integer.toHexString(0xFF & hash[i]));
+      }
+    }
+    return hexString.toString();
+  }
+}
+*/
 
 
 
