@@ -5,6 +5,26 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+*/
+// redisの実装
+import redis.clients.jedis.*;
+import org.redisson.*;
+import com.lambdaworks.codec.*;
+import com.lambdaworks.redis.*;
+//import org.apache.log4j.*;
+public class tmp {public static void main(String args[]) {
+
+// jedis
+Jedis jedis = new Jedis("localhost");
+jedis.set("key", "value");
+System.out.println(jedis.get("key"));
+
+// redisson動かない
+//Redisson redisson = Redisson.create();
+
+
+}}
 
 
 /*
