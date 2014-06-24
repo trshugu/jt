@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+
+<!-- Antのテスト -->
+<project name="jt" default="dist" basedir="." >
+  <target name="dist" >
+    <!-- javac srcdir="${basedir}" destdir="${basedir}" encoding="utf-8" classpath="log4j-1.2.17.jar;./" includeantruntime="false" excludes = "mvntest/**"/>
+    <java classname="tmp" classpath="log4j-1.2.17.jar;./" /-->
+    <javac srcdir="${basedir}" destdir="${basedir}" encoding="utf-8" classpath="logback-access-1.0.9.jar;logback-classic-1.0.9.jar;logback-core-1.0.9.jar;slf4j-api-1.7.2.jar;./" includeantruntime="false" excludes = "mvntest/**"/>
+    <java classname="tmp" classpath="logback-access-1.0.9.jar;logback-classic-1.0.9.jar;logback-core-1.0.9.jar;slf4j-api-1.7.2.jar;./" />
+  </target>
+  
+  <!-- classファイル削除 -->
+  <target name="clean">
+    <delete>
+      <fileset dir="${basedir}" includes="*.class" />
+    </delete>
+    <echo message="alien26 ${os.name}" />
+  </target>
+</project>
+
+
+
