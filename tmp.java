@@ -5,6 +5,13 @@ public class tmp {public static void main(String args[]) {
 
 
 
+
+// javapテスト
+public class tmp {public static void main(String args[]) {
+  System.out.println("javap");
+}}
+
+
 /*
 // redisの実装
 import redis.clients.jedis.*;
