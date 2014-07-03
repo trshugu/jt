@@ -5,12 +5,150 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+// インクリメントの場合Atomicメソッドでスレッドセーフ
+import java.util.concurrent.atomic.*;
+public class tmp
+{
+  private volatile static int intValue = 0;
+  //private volatile static AtomicInteger intValue = new AtomicInteger(0);
+  
+  //private static long longValue = 0;
+  //private volatile static long longValue = 0;
+  //private static AtomicLong longValue = new AtomicLong(0);
+  
+  public static void increment() {
+    intValue++;
+    //intValue.incrementAndGet();
+  }
+  
+  public static void main(String[] args) throws Exception
+  {
+    final int LOOP = 1000 * 1000 * 1000;
+    //final int LOOP = 1000;
+    
+    Thread th1 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          increment();
+        }
+      }
+    });
+    
+    Thread th2 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          increment();
+        }
+      }
+    });
+    
+    Thread th3 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          increment();
+        }
+      }
+    });
+    
+    th1.start();
+    th2.start();
+    th3.start();
+    
+    th1.join();
+    th2.join();
+    th3.join();
+    
+    System.out.println(intValue);
+    System.out.println("Finished");
+  }
+  
+}
+*/
 
+
+/*
+// 32bitのOSでのアウトオブオーダー問題
+import java.util.concurrent.atomic.*;
+
+public class tmp
+{
+  private static long longValue = 0;
+  //private volatile static long longValue = 0;
+  //private static AtomicLong longValue = new AtomicLong(0);
+  
+  public static void main(String[] args) throws Exception
+  {
+    final int LOOP = 1000 * 1000 * 1000;
+    //final int LOOP = 1000;
+    
+    Thread th1 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue = 1;
+          //longValue.set(1);
+          check(longValue);
+          //check(longValue.longValue());
+        }
+      }
+    });
+    
+    Thread th2 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue = -1;
+          //longValue.set(-1);
+          check(longValue);
+          //check(longValue.longValue());
+        }
+      }
+    });
+    
+    th1.start();
+    th2.start();
+    
+    th1.join();
+    th2.join();
+    
+    System.out.println("Finished");
+  }
+  
+  // 1と-1以外になった場合には例外を発生させる
+  private static void check(long value)
+  {
+    if (value != 1 && value != -1)
+    {
+      throw new RuntimeException(String.valueOf(value));
+    }
+  }
+}
+*/
+
+
+
+
+
+/*
 // javapテスト
 public class tmp {public static void main(String args[]) {
   System.out.println("javap");
 }}
-
+*/
 
 /*
 // redisの実装
