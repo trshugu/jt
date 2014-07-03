@@ -5,6 +5,50 @@ public class tmp {public static void main(String args[]) {
 
 
 
+
+/*
+// Initialize on demand holder idiom
+final class Singleton {
+  public String atai = "asdf";
+  
+  public String henkou()
+  {
+    atai = atai + "bn";
+    return atai;
+  }
+  
+  private Singleton(){
+    System.out.println("const");
+    System.out.println(atai);
+  }
+  
+  private static class SingletonHolder {
+    private static final Singleton instance = new Singleton();
+  }
+  
+  public static Singleton getInstance() {
+    return SingletonHolder.instance;
+  }
+}
+
+public class tmp {public static void main(String args[]) {
+  Singleton s = Singleton.getInstance();
+  System.out.println(s.henkou());
+  
+  Singleton i = Singleton.getInstance();
+  System.out.println(i.henkou());
+
+  Singleton n = Singleton.getInstance();
+  System.out.println(n.henkou());
+
+  System.out.println(s.atai);
+  System.out.println(i.atai);
+  System.out.println(n.atai);
+}}
+*/
+
+
+
 /*
 // インクリメントの場合Atomicメソッドでスレッドセーフ
 import java.util.concurrent.atomic.*;
