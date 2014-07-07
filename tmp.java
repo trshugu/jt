@@ -4,6 +4,48 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+/*
+// 64bitでは止まらない
+import java.util.concurrent.TimeUnit;
+public class tmp
+{
+  private static boolean stopRequested;
+  
+  // stopRequestedに設定する。
+  private static synchronized void requestStop()
+  {
+    stopRequested =  true;
+  }
+  
+  // stopRequestedを取得する。
+  private static synchronized boolean stopRequested()
+  {
+    return stopRequested;
+  }
+  
+  public static void main(String[] args) throws InterruptedException
+  {
+    Thread backgroundThread = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        int i = 0;
+        System.out.println(i);
+        while (!stopRequested())
+        {
+          i++;
+        }
+        System.out.println(i);
+      }
+    });
+    
+    backgroundThread.start();
+    TimeUnit.SECONDS.sleep(1);
+    //stopRequested = true;
+    requestStop();
+  }
+}
+*/
 
 
 /*
