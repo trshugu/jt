@@ -4,6 +4,45 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+
+/*
+class stasta {
+  static int ci = 1;
+  int si = 5;
+  
+  public void add(){
+    ci++;
+    si++;
+  }
+}
+
+public class tmp {public static void main(String args[]) {
+  stasta aa = new stasta();
+  System.out.println(aa.ci);
+  System.out.println(aa.si);
+  
+  aa.add();
+  System.out.println(aa.ci);
+  System.out.println(aa.si);
+  
+  stasta bb = new stasta();
+  System.out.println(bb.ci);
+  System.out.println(bb.si);
+  
+  bb.add();
+  System.out.println(bb.ci);
+  System.out.println(bb.si);
+
+  aa.add();
+  System.out.println(aa.ci);
+  System.out.println(aa.si);
+  System.out.println(bb.ci);
+  System.out.println(bb.si);
+
+}}
+*/
+
+
 /*
 // 64bitでは止まらない
 import java.util.concurrent.TimeUnit;
