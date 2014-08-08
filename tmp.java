@@ -5,6 +5,66 @@ public class tmp {public static void main(String args[]) {
 
 
 
+
+
+/*
+// DynamoDbLocal
+import java.util.ArrayList;
+import java.util.List;
+import com.amazonaws.auth.*;
+import com.amazonaws.services.dynamodbv2.*;
+import com.amazonaws.services.dynamodbv2.model.*;
+import com.amazonaws.services.dynamodbv2.datamodeling.*;
+
+public class tmp {public static void main(String args[]) {
+  String accessKey = "AccessKey";
+  String secretAccessKey = "SecretKey";
+  AWSCredentials cre = new BasicAWSCredentials(accessKey, secretAccessKey);
+  AmazonDynamoDBClient client = new AmazonDynamoDBClient(cre);
+  client.setEndpoint("http://localhost");
+  
+  // テーブル一覧
+  //System.out.println(client.listTables());
+  
+  // テーブル作成
+  List<KeySchemaElement> keySchema = new ArrayList<KeySchemaElement>();
+  keySchema.add( new KeySchemaElement().withAttributeName("HogeId").withKeyType(KeyType.HASH) );
+  AttributeDefinition attrDef = new AttributeDefinition().withAttributeName("HogeId").withAttributeType(ScalarAttributeType.S);
+  ProvisionedThroughput pt = new ProvisionedThroughput().withReadCapacityUnits(10L).withWriteCapacityUnits(5L);
+  
+  String tableName = "DynamoTest";
+  System.out.println( client.createTable(new CreateTableRequest(tableName, keySchema).withAttributeDefinitions(attrDef).withProvisionedThroughput(pt)) );
+  
+  // アイテム追加
+//  Map<String, AttributeValue> item = new HashMap<String, AttributeValue>();
+//  item.put("HogeId", new AttributeValue("AAAA"));
+//  item.put("foo", new AttributeValue("valueA"));
+//  item.put("bar", new AttributeValue().withSS(Arrays.asList("valueB", "valueC")));
+//  System.out.println(client.putItem(new PutItemRequest(tableName, item)));
+  
+  // アイテム取得
+//  Map<String, AttributeValue> key = new HashMap<String, AttributeValue>();
+//  key.put("HogeId", new AttributeValue("AAAA"));
+//  System.out.println(client.getItem(new GetItemRequest(tableName, key)));
+  
+  // アイテム更新
+//  Map<String, AttributeValueUpdate> attributes = new HashMap<String, AttributeValueUpdate>();
+//  attributes.put("bar", new AttributeValueUpdate(new AttributeValue().withS("valueD"), AttributeAction.PUT));
+//  System.out.println(client.updateItem(new UpdateItemRequest(tableName, key, attributes)));
+  
+  // スキャン
+//  System.out.println(client.scan(new ScanRequest(tableName)));
+  
+  // アイテム削除
+//  System.out.println(client.deleteItem(new DeleteItemRequest(tableName, key)));
+  
+  // テーブル削除
+//  System.out.println(client.deleteTable(new DeleteTableRequest(tableName)));
+
+}}
+*/
+
+
 /*
 class stasta {
   static int ci = 1;
@@ -132,7 +192,6 @@ public class tmp {public static void main(String args[]) {
 
 /*
 // インクリメントの場合Atomicメソッドでスレッドセーフ
-*/
 import java.util.concurrent.atomic.*;
 public class tmp
 {
@@ -199,6 +258,7 @@ public class tmp
   }
   
 }
+*/
 
 
 /*
