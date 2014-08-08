@@ -5,6 +5,12 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+*/
+import static spark.Spark.*;
+public class tmp {public static void main(String args[]) {
+  get("/hello", (req, res) -> "Hell World");
+}}
 
 
 /*

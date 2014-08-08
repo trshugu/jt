@@ -1,7 +1,7 @@
 package com.example;
 
 import static spark.Spark.*;
-import spark.*;
+//import spark.*;
 
   /**
  * spark world
@@ -11,6 +11,8 @@ public class App
 {
   public static void main( String[] args )
   {
+    get("/hello", (req, res) -> "Hell World");
+
     get(new Route("/hell")
     {
       @Override
