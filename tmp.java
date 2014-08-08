@@ -132,6 +132,7 @@ public class tmp {public static void main(String args[]) {
 
 /*
 // インクリメントの場合Atomicメソッドでスレッドセーフ
+*/
 import java.util.concurrent.atomic.*;
 public class tmp
 {
@@ -198,7 +199,6 @@ public class tmp
   }
   
 }
-*/
 
 
 /*
