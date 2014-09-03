@@ -5,12 +5,7 @@ public class tmp {public static void main(String args[]) {
 
 
 
-/*
-*/
-import org.apache.commons.lang3.RandomStringUtils;
 
-public class tmp {public static void main(String args[]) {
-}}
 
 
 
@@ -103,8 +98,8 @@ public class tmp {
 // ランダムな小英数字を指定文字数返却する
 public static String random(Integer i)
 {
-  //java.util.Random rnd =new java.util.Random();
-  java.security.SecureRandom rnd =new java.security.SecureRandom();
+  java.util.Random rnd =new java.util.Random();
+  //java.security.SecureRandom rnd =new java.security.SecureRandom();
   java.lang.StringBuilder res = new java.lang.StringBuilder();
   String list = "0123456789abcdefghijklmnopqrstuvwxyz";
   //String list = "0";
@@ -122,10 +117,10 @@ long start = System.currentTimeMillis();
 java.util.HashSet<String> set = new java.util.HashSet<String>();
 //java.util.LinkedList<String> set = new java.util.LinkedList<String>();
 
-for(int i = 0; i < 10000000; i++)
+for(int i = 0; i < 14000000; i++)
 //for(int i = 0; i < 100; i++)
 {
-  set.add(random(9));
+  set.add(random(20));
 }
 
 System.out.println(set.size());
