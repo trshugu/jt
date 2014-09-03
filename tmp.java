@@ -8,6 +8,126 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+// ランダムな小英数字の限界点(スレッド)
+public class tmp {
+
+// ランダムな小英数字を指定文字数返却する
+public static String random(Integer i)
+{
+  java.util.Random rnd =new java.util.Random();
+  java.lang.StringBuffer res = new java.lang.StringBuffer();
+  String list = "0123456789abcdefghijklmnopqrstuvwxyz";
+  
+  for (int j = 0; j < i; j++)
+  {
+    res.append(list.charAt(rnd.nextInt( list.length() )));
+  }
+  
+  return res.toString();
+}
+
+public final static java.util.HashSet<String> set = new java.util.HashSet<String>();
+
+public static synchronized void setting() {
+  set.add(random(14));
+}
+
+public static void main(String args[])  throws Exception{
+long start = System.currentTimeMillis();
+
+final int loop = 3000000;
+
+Thread th1 = new Thread(new Runnable()
+{
+  public void run()
+  {
+    for(int i = 0; i < loop + ( loop / 3 ); i++)
+    {
+      setting();
+    }
+  }
+});
+
+Thread th2 = new Thread(new Runnable()
+{
+  public void run()
+  {
+    for(int i = 0; i < loop; i++)
+    {
+      setting();
+    }
+  }
+});
+
+Thread th3 = new Thread(new Runnable()
+{
+  public void run()
+  {
+    for(int i = 0; i < loop; i++)
+    {
+      setting();
+    }
+  }
+});
+
+th1.start();
+th2.start();
+th3.start();
+
+th1.join();
+th2.join();
+th3.join();
+
+
+System.out.println(set.size());
+long end = System.currentTimeMillis();
+long isb = end - start;
+System.out.println(isb);
+
+}}
+*/
+
+
+/*
+// ランダムな小英数字の限界点
+// →36文字で1000万個は不可能
+public class tmp {
+
+// ランダムな小英数字を指定文字数返却する
+public static String random(Integer i)
+{
+  //java.util.Random rnd =new java.util.Random();
+  java.security.SecureRandom rnd =new java.security.SecureRandom();
+  java.lang.StringBuilder res = new java.lang.StringBuilder();
+  String list = "0123456789abcdefghijklmnopqrstuvwxyz";
+  //String list = "0";
+  
+  for (int j = 0; j < i; j++)
+  {
+    res.append(list.charAt(rnd.nextInt( list.length() )));
+  }
+  
+  return res.toString();
+}
+
+public static void main(String args[]) {
+long start = System.currentTimeMillis();
+java.util.HashSet<String> set = new java.util.HashSet<String>();
+//java.util.LinkedList<String> set = new java.util.LinkedList<String>();
+
+for(int i = 0; i < 10000000; i++)
+//for(int i = 0; i < 100; i++)
+{
+  set.add(random(9));
+}
+
+System.out.println(set.size());
+long end = System.currentTimeMillis();
+long isb = end - start;
+System.out.println(isb);
+}}
+*/
 
 
 
@@ -16,7 +136,6 @@ import static spark.Spark.*;
 public class tmp {public static void main(String args[]) {
   get("/hello", (req, res) -> "Hell World");
 }}
-*/
 
 /*
 // DynamoDbLocal
@@ -1024,7 +1143,7 @@ System.out.println(gson.toJson( obj ));
 /*
 public class tmp {public static void main(String args[]) {
 // 数字4文字10000回生成
-java.util.HashSet set = new java.util.HashSet();
+java.util.HashSet<String> set = new java.util.HashSet<String>();
 
 int random1 = 0;
 int random2 = 0;
@@ -1035,7 +1154,7 @@ java.util.Random r = new java.util.Random();
 int cnt = 0;
 while (cnt < 10000)
 {
-  System.out.println(cnt);
+  //System.out.println(cnt);
   random1 = r.nextInt(10);
   random2 = r.nextInt(10);
   random3 = r.nextInt(10);
@@ -1048,6 +1167,7 @@ while (cnt < 10000)
 System.out.println(set.size());
 }}
 */
+
 
 
 /*

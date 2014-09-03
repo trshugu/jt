@@ -1,5 +1,5 @@
 @echo off
-javac -encoding utf-8 tmp.java -classpath ./jar\*;./
+javac -encoding utf-8 tmp.java -classpath ./jar\*;./ -Xlint:unchecked
 java -classpath ./jar\*;./ tmp
 
 
