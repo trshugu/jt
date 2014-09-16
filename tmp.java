@@ -7,6 +7,29 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+// java標準logging
+import java.util.logging.*;
+public class tmp {public static void main(String args[]) {
+
+Logger l = Logger.getLogger("lll");
+l.info("ininin");
+
+FileHandler fh = null;
+try{
+fh = new FileHandler("log.txt");
+}catch(Exception e){}
+
+Formatter format = new XMLFormatter();
+fh.setFormatter(format);
+l.addHandler(fh);
+l.info("ininin");
+
+
+System.out.println("tesa");
+
+}}
+*/
 
 
 /*
