@@ -8,6 +8,16 @@ public class tmp {public static void main(String args[]) {
 
 
 /*
+// ファイル削除
+import java.io.File;
+public class tmp {public static void main(String args[]) {
+System.out.println("tesa");
+new File("death.txt").delete();
+}}
+*/
+
+
+/*
 // java標準logging
 import java.util.logging.*;
 public class tmp {public static void main(String args[]) {
