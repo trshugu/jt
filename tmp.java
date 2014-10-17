@@ -6,6 +6,21 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+// 改行の許容
+public class tmp {public static void main(String args[]) {
+
+System.out.println("bon");
+System.out.println(
+  (1 == 2)
+    ? "iti"
+    : "no" 
+);
+
+}}
+*/
+
+
 
 /*
 // ファイル削除

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="windows-31j" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2014-10-17T14:04:22</date>
+  <millis>1413522262291</millis>
+  <sequence>1</sequence>
+  <logger>lll</logger>
+  <level>INFO</level>
+  <class>tmp</class>
+  <method>main</method>
+  <thread>1</thread>
+  <message>ininin</message>
+</record>
+</log>
