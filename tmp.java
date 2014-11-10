@@ -7,6 +7,46 @@ public class tmp {public static void main(String args[]) {
 
 
 /*
+*/
+public class tmp {public static void main(String args[]) {
+}}
+
+
+
+/*
+// RxJava
+import rx.Observable;
+import rx.functions.Action1;
+
+public class tmp {
+  public static void main(String args[]) {
+    System.out.println("bon");
+    hello("sadf");
+    hello("death");
+  }
+
+  // java8向け
+  public static void hello(String... names) {
+    Observable.from(names).subscribe( s ->
+      System.out.println("Hello " + s + "!")
+    );
+  }
+
+  // java7向け
+  public static void hello(String... names) {
+    Observable.from(names).subscribe(new Action1<String>() {
+      @Override
+      public void call(String s)
+      {
+        System.out.println("Hello " + s + "!");
+      }
+    });
+  }
+}
+*/
+
+
+/*
 // 改行の許容
 public class tmp {public static void main(String args[]) {
 
