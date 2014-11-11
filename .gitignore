@@ -5,3 +5,44 @@
 *.war
 *.ear
 *.db
+
+# Ignore Play! working directory #
+bin/
+/db
+.eclipse
+/lib/
+/logs/
+/modules
+/project/project
+/project/target
+/target
+tmp/
+test-result
+server.pid
+*.iml
+*.eml
+/dist/
+.cache
+
+*.class
+*.log
+*.jar
+
+# sbt specific
+dist/*
+project/
+target/
+lib_managed/
+src_managed/
+project/boot/
+project/plugins/project/
+
+
+# Scala-IDE specific
+.scala_dependencies]
+
+*.zip
+.idea
+.idea/*
+sbttmp/.idea
+
