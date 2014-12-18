@@ -6,10 +6,30 @@ public class tmp {public static void main(String args[]) {
 
 
 
+
+
 /*
-*/
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import org.apache.commons.lang.time.DateUtils;
+
 public class tmp {public static void main(String args[]) {
+  try
+  {
+    Date d = DateUtils.truncate(new SimpleDateFormat("yyyyMMdd").parse("20141218"), Calendar.DAY_OF_MONTH);
+    Date t = DateUtils.truncate(new SimpleDateFormat("yyyyMMdd").parse("20141218"), Calendar.DAY_OF_MONTH);
+    System.out.println(d.compareTo(t));
+    //System.out.println(d.after(t));
+    // System.out.println(DateUtils.truncate(new SimpleDateFormat("yyyyMMdd").parse("20141218"), Calendar.DAY_OF_MONTH));
+    
+  }
+  catch (ParseException e)
+  {
+  }
 }}
+*/
 
 
 
