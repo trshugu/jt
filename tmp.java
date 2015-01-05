@@ -5,7 +5,23 @@ public class tmp {public static void main(String args[]) {
 
 
 
-
+/*
+public class tmp {public static void main(String args[]) {
+  String te = "te", st = "st";
+  
+  // ここでプールされるとintern時に
+  "test".length();
+  String username = te + st;
+  
+  // "test"がある場合文字列が。ない場合は"test"がプールされ参照が返却される。
+  username.intern();
+  
+  // 参照と"test"を比較する場合はtrue。文字列同士を比較するとfalseになる。
+  System.out.println("String object the same is:" + (username == "test"));
+  System.out.println(System.identityHashCode(username));
+  System.out.println(System.identityHashCode("test"));
+}}
+*/
 
 
 /*
