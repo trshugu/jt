@@ -16,6 +16,70 @@ public class tmp {public static void main(String args[]) {
   System.out.println("String object the same is:" + ("test".equals(username)));
 }}
 
+/*
+// 日付変換分析
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
+public class tmp {public static void main(String args[]) {
+  String strNow =new Timestamp(System.currentTimeMillis()).toString();
+  int cnt = 0;
+while (cnt < 2000000000){cnt++;}
+  
+  System.out.println( strNow );
+  String strDate = strNow.trim();
+  System.out.println( strDate );
+  Calendar cal = Calendar.getInstance();
+  cal.setLenient(false);
+  
+  int yyyy = Integer.parseInt(strDate.substring(0,4));
+  int MM = Integer.parseInt(strDate.substring(5,7));
+  int dd = Integer.parseInt(strDate.substring(8,10));
+  int HH = cal.get(Calendar.HOUR_OF_DAY);
+  int mm = cal.get(Calendar.MINUTE);
+  int ss = cal.get(Calendar.SECOND);
+  int SSS = cal.get(Calendar.MILLISECOND);
+  
+  cal.clear();
+  cal.set(yyyy,MM-1,dd);
+  
+  HH = Integer.parseInt(strDate.substring(11,13));
+  mm = Integer.parseInt(strDate.substring(14,16));
+  ss = Integer.parseInt(strDate.substring(17,19));
+  SSS = Integer.parseInt(strDate.substring(20,23));
+  cal.set(Calendar.HOUR_OF_DAY,HH);
+  cal.set(Calendar.MINUTE,mm);
+  cal.set(Calendar.SECOND,ss);
+  cal.set(Calendar.MILLISECOND,SSS);
+  
+  SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+  System.out.println( cal );
+  System.out.println( cal.getTime() );
+  System.out.println( sdf.format( cal.getTime() ) );
+  
+}}
+*/
+
+
+/*
+public class tmp {public static void main(String args[]) {
+  String te = "te", st = "st";
+  
+  // ここでプールされるとintern時に
+  "test".length();
+  String username = te + st;
+  
+  // "test"がある場合文字列が。ない場合は"test"がプールされ参照が返却される。
+  username.intern();
+  
+  // 参照と"test"を比較する場合はtrue。文字列同士を比較するとfalseになる。
+  System.out.println("String object the same is:" + (username == "test"));
+  System.out.println(System.identityHashCode(username));
+  System.out.println(System.identityHashCode("test"));
+}}
+*/
+
 
 /*
 import java.text.ParseException;
