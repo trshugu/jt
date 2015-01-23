@@ -5,6 +5,39 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+import java.util.Calendar;
+import java.text.SimpleDateFormat;
+import java.text.ParseException;
+import java.util.Date;
+import org.apache.commons.lang.time.DateUtils;
+public class tmp {public static void main(String args[]) {
+
+// 最新判定
+try {
+Calendar lD = Calendar.getInstance();
+Calendar sd = Calendar.getInstance();
+Date now = DateUtils.truncate(new SimpleDateFormat("yyyyMMdd").parse("20150123"), Calendar.DAY_OF_MONTH);
+lD.setTime(now);
+sd.setTime(now);
+
+System.out.println( lD.getTime() );
+
+lD.add( Calendar.DAY_OF_MONTH, 14 * -1 );
+sd.add( Calendar.DAY_OF_MONTH, 15 * -1 );
+
+System.out.println( lD.getTime() );
+
+System.out.println( lD.getTime().compareTo(sd.getTime()) <= 0 );
+
+}
+catch (ParseException e){
+}
+
+
+}}
+*/
+
 
 
 /*
