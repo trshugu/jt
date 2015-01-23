@@ -39,6 +39,20 @@ catch (ParseException e){
 */
 
 
+/*
+public class tmp {public static void main(String args[]) {
+  String te = "te", st = "st";
+  System.out.println("test");
+  String username = te + st;
+  username.intern();
+  //"test".intern();
+  //System.out.println(System.identityHashCode(username));
+  System.out.println("String object the same is:" + (username == "test"));
+  System.out.println("String object the same is:" + (username.equals("test")));
+  System.out.println("String object the same is:" + ("test".equals(username)));
+}}
+*/
+
 
 /*
 // 日付変換分析
