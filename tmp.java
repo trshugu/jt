@@ -4,6 +4,15 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+/*
+public class tmp {public static void main(String args[]) {
+  long start = System.currentTimeMillis();
+  long end = System.currentTimeMillis();
+  long isb = end - start;
+  System.out.println("かかった時間：  " + isb);
+}}
+*/
+
 
 /*
 import java.util.Calendar;
