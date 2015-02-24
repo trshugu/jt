@@ -4,6 +4,20 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+
+/*
+// heep
+public class tmp {public static void main(String args[]) {
+
+System.out.println( "heep" );
+System.out.println( "a" + Runtime.getRuntime().totalMemory() );
+System.out.println( Runtime.getRuntime().freeMemory() );
+System.out.println( Runtime.getRuntime().maxMemory() );
+
+}}
+*/
+
+
 /*
 public class tmp {public static void main(String args[]) {
   long start = System.currentTimeMillis();
