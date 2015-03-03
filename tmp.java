@@ -4,6 +4,61 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+/*
+// joinでTSV
+import java.util.ArrayList;
+import java.util.List;
+import org.apache.commons.lang.StringUtils;
+public class tmp {public static void main(String args[]) {
+  List<String> ltsv = new ArrayList<String>();
+  ltsv.add("aaa");
+  ltsv.add("bbb");
+  System.out.println( StringUtils.join(ltsv, "\t") );
+  
+  String[] obj = {
+    "asdf",
+    "sdfd",
+    "kijij"
+  };
+  
+  System.out.println( StringUtils.join(obj, "\t") );
+  String[] aa ={"2323","e","sadf"};
+  System.out.println( StringUtils.join(aa, "\t") );
+}}
+*/
+
+/*
+// UnsupportedEncodingExceptionを駆逐
+import java.security.MessageDigest;
+import java.nio.charset.StandardCharsets;
+
+public class tmp {public static void main(String args[]) {
+
+  String hashKey = "anokutara";
+  // String algorithm = "MD5";
+  // String algorithm = "SHA-256";
+  String algorithm = "naiyon";
+  String hash = null;
+  
+    // ハッシュ値生成
+    MessageDigest md = MessageDigest.getInstance(algorithm);
+    byte[] hashBytes = md.digest(hashKey.getBytes(StandardCharsets.UTF_8));
+    //byte[] hashBytes = md.digest(hashKey.getBytes("UTF-8"));
+    
+    // ハッシュ値を16進文字列に変換
+    StringBuilder str = new StringBuilder("");
+    for (byte hashByte : hashBytes)
+    {
+      str.append(Integer.toHexString(0xFF & hashByte).toUpperCase());
+    }
+    
+    // hash = str.substring(5, 5 + 5);
+    hash = str.toString();
+
+  System.out.println( hash );
+}}
+*/
+
 
 /*
 // heep
