@@ -4,6 +4,153 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+
+
+// 32bitのOSでのアウトオブオーダー問題2
+public class tmp
+{
+  private static long longValue = 0;
+  
+  public static void main(String[] args) throws Exception
+  {
+    final int LOOP = 1000 * 1000 * 1000;
+    
+    Thread th1 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue = 1;
+          check(longValue);
+        }
+      }
+    });
+    
+    Thread th2 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue = -1;
+          check(longValue);
+        }
+      }
+    });
+    
+    th1.start();
+    th2.start();
+    
+    th1.join();
+    th2.join();
+    
+    System.out.println("Finished");
+  }
+  
+  // 1と-1以外になった場合には例外を発生させる
+  private static void check(long value)
+  {
+    if (value != 1 && value != -1)
+    {
+      throw new RuntimeException(String.valueOf(value));
+    }
+  }
+}
+
+
+/*
+import java.time.format.DateTimeFormatter;
+import java.time.LocalDateTime;
+import java.util.stream.IntStream;
+
+public class tmp {
+    class DateTimeFormatterThreadTest {
+        DateTimeFormatter df = DateTimeFormatter.ofPattern("uuuu-MM-dd HH:mm:ss");
+
+        public void exec(int count) {
+            IntStream.range(0, count)
+            .mapToObj(i -> LocalDateTime.now()
+                .plusYears(i)
+                .plusMonths(i)
+                .plusDays(i)
+                .plusHours(i)
+                .plusMinutes(i)
+                .plusSeconds(i)
+            )
+            .map(d -> d + " : " + df.format(d))
+            .parallel()
+            .forEach(System.out::println);
+        }
+    }
+
+    public static void main(String[] args) {
+        new tmp().go();
+    }
+
+    public void go() {
+        int count = 20;
+        new DateTimeFormatterThreadTest().exec(count);
+    }
+}
+*/
+
+
+
+/*
+// sdfはスレッドセーフでない
+import java.util.Calendar;
+import java.util.stream.IntStream;
+import java.text.SimpleDateFormat;
+
+public class tmp {
+  class SimpleDateFormatThreadTest {
+      SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+      
+      public void exec(int count) {
+          IntStream.range(0, count)
+          .mapToObj(i -> {
+              Calendar cal = Calendar.getInstance();
+              cal.add(Calendar.YEAR, i);
+              cal.add(Calendar.MONTH, i);
+              cal.add(Calendar.DATE, i);
+              cal.add(Calendar.HOUR_OF_DAY, i);
+              cal.add(Calendar.MINUTE, i);
+              cal.add(Calendar.SECOND, i);
+              return cal.getTime();
+          })
+          .map(d -> d + " : " + sdf.format(d))
+          .parallel()
+          .forEach(System.out::println);
+      }
+  }
+
+  public static void main(String[] args) {
+      new tmp().go();
+  }
+
+  public void go() {
+      int count = 20;
+      new SimpleDateFormatThreadTest().exec(count);
+  }
+
+
+}
+*/
+
+
+
+/*
+// nullという文字列
+public class tmp {public static void main(String args[]) {
+  String aaa = null;
+  aaa += "asdf";
+  System.out.println(aaa); 
+}}
+*/
+
+
+
 /*
 // joinでTSV
 import java.util.ArrayList;
