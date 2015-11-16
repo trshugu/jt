@@ -4,8 +4,25 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+/*
+public class tmp {public static void main(String args[]) throws Exception{
+  try
+  {
+    System.out.println("asdf");
+    String asdf = null;
+    throw new Exception("erraa");
+  }
+  catch (Exception e)
+  {
+    System.out.println("ktiayo");
+    System.out.println(e);
+    e.printStackTrace();
+  }
+}}
+*/
 
 
+/*
 // 32bitのOSでのアウトオブオーダー問題2
 public class tmp
 {
@@ -57,6 +74,7 @@ public class tmp
     }
   }
 }
+*/
 
 
 /*
