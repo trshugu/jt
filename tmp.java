@@ -20,9 +20,11 @@ public class tmp {
   
   public static void main(String args[]) {
     File files[] = listFiles("./","*");
+    /*
     for (int i=0; i<files.length; i++) {
         System.out.println("ファイル" + (i+1) + "→" + files[i]);
     }
+    */
   }
 
   public static File[] listFiles(String directoryPath, String fileName) {
@@ -42,6 +44,9 @@ public class tmp {
       ("引数で指定されたパス[" + dir.getAbsolutePath() + "]はディレクトリではありません。");
     }
     File[] files = dir.listFiles();
+    for (int i=0; i<files.length; i++) {
+        System.out.println("ファイル" + (i+1) + "→" + files[i]);
+    }
     
     // その出力
     for (int i = 0; i < files.length; i++) {
