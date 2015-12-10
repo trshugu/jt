@@ -1,2 +1,2 @@
-javac -encoding utf-8 tmp.java -classpath ./jar/*:./
+javac -encoding EUC_JP_LINUX tmp.java -classpath ./jar/*:./
 java -classpath ./jar/*:./ tmp
