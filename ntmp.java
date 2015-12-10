@@ -20,11 +20,9 @@ public class ntmp {
   public static void main(String args[]) {
     File files[] = listFiles("./","*");
     System.out.println( new InputStreamReader(System.in).getEncoding() );
-    /*
     for (int i=0; i<files.length; i++) {
         System.out.println("ファイル" + (i+1) + "→" + files[i]);
     }
-    */
   }
 
   public static File[] listFiles(String directoryPath, String fileName) {
