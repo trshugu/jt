@@ -14,7 +14,7 @@ public class ntmp {public static void main(String args[]) {
   File dir = new File(path);
   File[] files = dir.listFiles();
   for (int i=0; i<files.length; i++) {
-      System.out.println("ファイル" + (i+1) + "→" + files[i]);
+      System.out.println("fffff" + (i+1) + "->" + files[i]);
   }
   
 }}
