@@ -22,13 +22,13 @@ public class ntmp {
     System.out.println( new InputStreamReader(System.in).getEncoding() );
     /*
     for (int i=0; i<files.length; i++) {
-        System.out.println("ãƒ•ã‚¡ã‚¤ãƒ«" + (i+1) + "â†’" + files[i]);
+        System.out.println("¥Õ¥¡¥¤¥ë" + (i+1) + "¢ª" + files[i]);
     }
     */
   }
 
   public static File[] listFiles(String directoryPath, String fileName) {
-    // ãƒ¯ã‚¤ãƒ«ãƒ‰ã‚«ãƒ¼ãƒ‰æ–‡å­—ã¨ã—ã¦*ã‚’æ­£è¦è¡¨ç¾ã«å¤‰æ›
+    // ¥ï¥¤¥ë¥É¥«¡¼¥ÉÊ¸»ú¤È¤·¤Æ*¤òÀµµ¬É½¸½¤ËÊÑ´¹
     if (fileName != null) {
       fileName = fileName.replace(".", "\\.");
       fileName = fileName.replace("*", ".*");
@@ -41,18 +41,18 @@ public class ntmp {
     File dir = new File(directoryPath);
     if (!dir.isDirectory()) {
       throw new IllegalArgumentException
-      ("å¼•æ•°ã§æŒ‡å®šã•ã‚ŒãŸãƒ‘ã‚¹[" + dir.getAbsolutePath() + "]ã¯ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚");
+      ("°ú¿ô¤Ç»ØÄê¤µ¤ì¤¿¥Ñ¥¹[" + dir.getAbsolutePath() + "]¤Ï¥Ç¥£¥ì¥¯¥È¥ê¤Ç¤Ï¤¢¤ê¤Þ¤»¤ó¡£");
     }
     File[] files = dir.listFiles();
     //for (int i=0; i<files.length; i++) {
-    //    System.out.println("ãƒ•ã‚¡ã‚¤ãƒ«" + (i+1) + "â†’" + files[i]);
+    //    System.out.println("¥Õ¥¡¥¤¥ë" + (i+1) + "¢ª" + files[i]);
     //}
     
-    // ãã®å‡ºåŠ›
+    // ¤½¤Î½ÐÎÏ
     for (int i = 0; i < files.length; i++) {
       File file = files[i];
       addFile(type, fileNamePattern, set, file, period);
-      // å†å¸°çš„ã«æ¤œç´¢ï¼†ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªãªã‚‰ã°å†å¸°çš„ã«ãƒªã‚¹ãƒˆã«è¿½åŠ 
+      // ºÆµ¢Åª¤Ë¸¡º÷¡õ¥Ç¥£¥ì¥¯¥È¥ê¤Ê¤é¤ÐºÆµ¢Åª¤Ë¥ê¥¹¥È¤ËÄÉ²Ã
       if (isRecursive && file.isDirectory()) {
         listFiles(file.getAbsolutePath(), fileNamePattern, type, isRecursive, period);
       }
@@ -77,13 +77,13 @@ public class ntmp {
     if (match != null && !file.getName().matches(match)) {
       return;
     }
-    // æŒ‡å®šæ—¥æ•°çµŒéŽã—ã¦ã„ã‚‹ã‹ã©ã†ã‹ã®æŒ‡å®šãŒã‚ã‚‹å ´åˆ
+    // »ØÄêÆü¿ô·Ð²á¤·¤Æ¤¤¤ë¤«¤É¤¦¤«¤Î»ØÄê¤¬¤¢¤ë¾ì¹ç
     if (period != 0) {
-      // ãƒ•ã‚¡ã‚¤ãƒ«æ›´æ–°æ—¥ä»˜
+      // ¥Õ¥¡¥¤¥ë¹¹¿·ÆüÉÕ
       Date lastModifiedDate = new Date(file.lastModified());
       String lastModifiedDateStr = new SimpleDateFormat("yyyyMMdd").format(lastModifiedDate);
       
-      // æŒ‡å®šã®æ—¥ä»˜ï¼ˆï¼‘æ—¥ã‚’ãƒŸãƒªç§’ã§è¨ˆç®—ï¼‰
+      // »ØÄê¤ÎÆüÉÕ¡Ê£±Æü¤ò¥ß¥êÉÃ¤Ç·×»»¡Ë
       long oneDayTime = 24L * 60L * 60L * 1000L; 
       long periodTime = oneDayTime * Math.abs(period);
       Date designatedDate = new Date(System.currentTimeMillis() - periodTime);
@@ -99,7 +99,7 @@ public class ntmp {
         }
       }
     }
-    // å…¨ã¦ã®æ¡ä»¶ã«è©²å½“ã™ã‚‹å ´åˆãƒªã‚¹ãƒˆã«æ ¼ç´
+    // Á´¤Æ¤Î¾ò·ï¤Ë³ºÅö¤¹¤ë¾ì¹ç¥ê¥¹¥È¤Ë³ÊÇ¼
     set.add(file);
   }
   
