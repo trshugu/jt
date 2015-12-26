@@ -7,7 +7,25 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+import java.math.*;
+class tmp{
+public static void main(String[] args){
+    BigDecimal pointOne = new BigDecimal(0.1); 
+    BigDecimal sum = new BigDecimal("0");
+    
+      for(int i=0;i<10;i++){
+      //System.out.println(sum);
+      sum = sum.add(pointOne);
+    }
+    System.out.println("ans:"+ sum);
+    }
+}
+*/
 
+
+
+/*
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -22,11 +40,6 @@ public class tmp {
   public static void main(String args[]) {
     File files[] = listFiles("./","*");
     System.out.println( new InputStreamReader(System.in).getEncoding() );
-    /*
-    for (int i=0; i<files.length; i++) {
-        System.out.println("ファイル" + (i+1) + "→" + files[i]);
-    }
-    */
   }
 
   public static File[] listFiles(String directoryPath, String fileName) {
@@ -111,7 +124,7 @@ public class tmp {
     set.clear();
   }
 }
-
+*/
 
 /*
 import java.io.File;
