@@ -7,6 +7,12 @@ public class tmp {public static void main(String args[]) {
 
 
 
+
+public class tmp {public static void main(String args[]) {
+  System.out.println("java");
+}}
+
+
 /*
 import java.io.*;
 import java.util.HashMap;
