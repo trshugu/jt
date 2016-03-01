@@ -7,10 +7,15 @@ public class tmp {public static void main(String args[]) {
 
 
 
-
-public class tmp {public static void main(String args[]) {
-  System.out.println("java");
-}}
+/*
+import java.util.*;
+import java.text.*;
+import java.io.*;
+import java.lang.*;
+import java.math.*;
+import java.util.regex.*;
+import java.util.logging.*;
+*/
 
 
 /*
@@ -800,6 +805,8 @@ import static spark.Spark.*;
 public class tmp {public static void main(String args[]) {
   get("/hello", (req, res) -> "Hell World");
 }}
+*/
+
 
 /*
 // DynamoDbLocal
