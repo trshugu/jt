@@ -4,7 +4,90 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+/*
+import java.util.ArrayList;
+import java.util.AbstractList;
+import java.util.AbstractCollection;
+import java.util.List;
+import org.apache.commons.lang3.StringUtils;
 
+public class tmp {public static void main(String args[]) {
+  long start = System.currentTimeMillis();
+  for(int i = 0; i < 100; i++)
+  {
+    ArrayList<String> ltsv = new ArrayList<String>();
+    for(int j = 0; j < 100; j++)
+    {
+      ltsv.add("test" + Integer.toString(j));
+    }
+    // System.out.println( StringUtils.join(ltsv, "\t") );
+  }
+  
+  long end = System.currentTimeMillis();
+  long isb = end - start;
+  System.out.println("かかった時間：  " + isb);
+}}
+*/
+
+
+/* 実行順により差異がでるので一個ずつやる
+public class tmp {public static void main(String args[]) {
+  Integer ra = 1000;
+  
+  //  ==================================================
+  // Array
+  long astart = System.currentTimeMillis();
+  for(int i = 0; i < ra; i++)
+  {
+    ArrayList<String> altsv = new ArrayList<String>();
+    for(int j = 0; j < ra; j++)
+    {
+      altsv.add("test" + Integer.toString(j));
+    }
+    // System.out.println( StringUtils.join(ltsv, "\t") );
+  }
+  
+  long aend = System.currentTimeMillis();
+  long aisb = aend - astart;
+  System.out.println("Aかかった時間：  " + aisb);
+  
+  //  ==================================================
+  // List
+  long istart = System.currentTimeMillis();
+  for(int i = 0; i < ra; i++)
+  {
+    ArrayList<String> iltsv = new ArrayList<String>();
+    for(int j = 0; j < ra; j++)
+    {
+      iltsv.add("test" + Integer.toString(j));
+    }
+    //System.out.println( StringUtils.join(llltsv, "\t") );
+  }
+  long iend = System.currentTimeMillis();
+  long iisb = iend - istart;
+  System.out.println("Lかかった時間：  " + iisb);
+
+  //  ==================================================
+  // Abstract
+  long bstart = System.currentTimeMillis();
+  for(int i = 0; i < ra; i++)
+  {
+    ArrayList<String> bltsv = new ArrayList<String>();
+      for(int j = 0; j < ra; j++)
+      {
+        bltsv.add("test" + Integer.toString(j));
+      }
+  }
+  
+  //System.out.println( StringUtils.join(lltsv, "\t") );
+  
+  long bend = System.currentTimeMillis();
+  long bisb = bend - bstart;
+  System.out.println("bかかった時間：  " + bisb);
+  
+}}
+
+*/
 
 
 /*
