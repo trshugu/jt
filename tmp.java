@@ -13,10 +13,10 @@ import org.apache.commons.lang3.StringUtils;
 
 public class tmp {public static void main(String args[]) {
   long start = System.currentTimeMillis();
-  for(int i = 0; i < 100; i++)
+  for(int i = 0; i < 10000; i++)
   {
-    ArrayList<String> ltsv = new ArrayList<String>();
-    for(int j = 0; j < 100; j++)
+    ArrayList<String> ltsv = new ArrayList<>();
+    for(int j = 0; j < 10000; j++)
     {
       ltsv.add("test" + Integer.toString(j));
     }
@@ -28,6 +28,9 @@ public class tmp {public static void main(String args[]) {
   System.out.println("かかった時間：  " + isb);
 }}
 */
+
+
+
 
 
 /* 実行順により差異がでるので一個ずつやる
