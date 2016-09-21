@@ -4,6 +4,49 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+
+
+
+/*
+// nullでかえってくる
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Map;
+
+public class tmp {
+  private static final Map<Integer, String> mapin;
+  static {
+    HashMap<Integer, String> map = new HashMap<Integer, String>();
+    map.put(new Integer(0), "え");
+    map.put(new Integer(1), "む");
+    map.put(new Integer(5), "ぼ");
+    map.put(new Integer(6), "R");
+    map.put(new Integer(7), "くり");
+    map.put(new Integer(8), "ル");
+    map.put(new Integer(10), "プ");
+    map.put(new Integer(15), "し");
+    map.put(new Integer(16), "シ");
+    map.put(new Integer(17), "ア");
+    map.put(new Integer(18), "ビ");
+    mapin = Collections.unmodifiableMap(map);
+  }
+  
+  public static String cpt(Integer pid) {
+    return mapin.get(pid);
+  }
+  
+  public static void main(String args[]) {
+    System.out.println( "jiken" );
+    String tn = cpt(19);
+    System.out.println( tn );
+    
+    
+  }
+}
+
+*/
+
+
 /*
 import java.util.ArrayList;
 import java.util.AbstractList;
