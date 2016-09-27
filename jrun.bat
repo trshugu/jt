@@ -1,6 +1,6 @@
 @echo off
 javac -encoding utf-8 tmp.java -classpath ./jar\*;./ -Xlint:unchecked
-java -classpath ./jar\*;./ tmp
+java -classpath ./jar\*;./ tmp %1 %2
 
 
 

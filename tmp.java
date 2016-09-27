@@ -5,6 +5,107 @@ public class tmp {public static void main(String args[]) {
 
 
 
+/*
+public class tmp
+{
+  public static void main(String... args)
+  {
+    // 引数1:モード 引数2:回数
+    int mode = 0;
+    int count = 1;
+    
+    if( args.length  == 0 )
+    {
+      mode = 0;
+    }
+    
+    if( args.length  > 0 )
+    {
+      mode = Integer.parseInt(args[0]);
+    }
+    
+    if( args.length  > 1 )
+    {
+      count = Integer.parseInt(args[1]);
+    }
+    
+    String[] target = genarateTestData(count);
+    
+    long start = 0;
+    long end = 0;
+    String title = "";
+    if( mode == 0)
+    {
+      title = "StringBuffer";
+      start = System.nanoTime();
+      concatByStringBuffer(target);
+      end = System.nanoTime();
+    }
+    else if( mode == 1)
+    {
+      title = "StringBuilder";
+      start = System.nanoTime();
+      concatByStringBuilder(target);
+      end = System.nanoTime();
+    }
+    else if( mode == 2)
+    {
+      title = "String";
+      start = System.nanoTime();
+      concatByString(target);
+      end = System.nanoTime();
+    }
+    
+    System.out.println(title + "," + count + "," + (end - start));
+  }
+  
+  private static String concatByStringBuffer(String[] data)
+  {
+    StringBuffer buff = new StringBuffer();
+    for(String str: data)
+    {
+      buff.append(str);
+    }
+    
+    return buff.toString();
+  }
+  
+  private static String concatByStringBuilder(String[] data)
+  {
+    StringBuilder buff = new StringBuilder();
+    for(String str: data)
+    {
+      buff.append(str);
+    }
+    
+    return buff.toString();
+  }
+  
+  private static String concatByString(String[] data)
+  {
+    String buff = "";
+    for(String str: data)
+    {
+      buff += str;
+    }
+    
+    return buff;
+  }
+  
+  
+  private static String[] genarateTestData(int count)
+  {
+    String[] result = new String[count];
+    for(int i = 0; i< count; i++)
+    {
+      result[i] = "test" + i;
+    }
+    
+    return result;
+  } 
+}
+*/
+
 
 
 /*
