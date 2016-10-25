@@ -4,6 +4,163 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+/*
+import java.util.*;
+
+public class tmp {public static void main(String args[]) {
+  ArrayList<String> ltsv = new ArrayList<>();
+  ltsv.add(null);
+  ltsv.add(null);
+  ltsv.add(null);
+  ltsv.add(null);
+  ltsv.add(null);
+  ltsv.add(null);
+  System.out.println(ltsv.size());
+  ltsv.removeAll(Collections.singleton(null));
+  System.out.println(ltsv.size());
+  
+}}
+*/
+
+/*
+public class tmp {public static void main(String args[]) {
+  StringBuilder stringbNantoka = new StringBuilder("yami");
+  stringbNantoka.setCharAt(0,'k');
+  System.out.println(stringbNantoka);
+}}
+
+*/
+
+
+
+/*
+public class tmp
+{
+  // 64ビットのロングなバリュー
+  private static StringBuilder longValue = new StringBuilder(1);
+  
+  public static void main(String[] args) throws Exception
+  {
+    // じゅうおくかいくりかえす
+    final int LOOP = 1000 * 1000 * 1000;
+    System.out.println(longValue.length());
+    longValue.append("123456789abcdefZ");
+    System.out.println(longValue.length());
+    
+    // longなバリューに いち を入れるスレッドさくせい
+    Thread th1 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue.setCharAt(15,'G');
+          check(longValue.toString()); // 1 || -1 ならOK
+        }
+      }
+    });
+    
+    // longなバリューに マイナスいち を入れるスレッド作成
+    Thread th2 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue.setCharAt(15,'0');
+          check(longValue.toString()); // 1 || -1 ならOK
+        }
+      }
+    });
+    
+    // ほぼ同時に処理スタート
+    th1.start();
+    th2.start();
+    
+    // 両方のスレッドが終わるのを待つ・・・
+    th1.join();
+    th2.join();
+    
+    System.out.println("Finished");
+  }
+  
+  // 1と-1以外になった場合には例外を発生させる
+  // 書いた通りに動くなら例外は発生しないはず
+  private static void check(String value)
+  {
+    if (!"123456789abcdefG".equals(value) && !"123456789abcdef0".equals(value))
+    {
+      // nanigaderukana nanigaderukana
+      throw new RuntimeException(String.valueOf(value));
+    }
+  }
+}
+*/
+
+
+
+/*
+public class tmp
+{
+  // 64ビットのロングなバリュー
+  private static long longValue = 0;
+  
+  public static void main(String[] args) throws Exception
+  {
+    // じゅうおくかいくりかえす
+    final int LOOP = 1000 * 1000 * 1000;
+    
+    // longなバリューに いち を入れるスレッドさくせい
+    Thread th1 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue = 1;
+          check(longValue); // 1 || -1 ならOK
+        }
+      }
+    });
+    
+    // longなバリューに マイナスいち を入れるスレッド作成
+    Thread th2 = new Thread(new Runnable()
+    {
+      public void run()
+      {
+        for (int i = 0; i < LOOP; i++)
+        {
+          longValue = -1;
+          check(longValue); // 1 || -1 ならOK
+        }
+      }
+    });
+    
+    // ほぼ同時に処理スタート
+    th1.start();
+    th2.start();
+    
+    // 両方のスレッドが終わるのを待つ・・・
+    th1.join();
+    th2.join();
+    
+    System.out.println("Finished");
+  }
+  
+  // 1と-1以外になった場合には例外を発生させる
+  // 書いた通りに動くなら例外は発生しないはず
+  private static void check(long value)
+  {
+    if (value != 1 && value != -1)
+    {
+      // nanigaderukana nanigaderukana
+      throw new RuntimeException(String.valueOf(value));
+    }
+  }
+}
+*/
+
+
 
 /*
 public class tmp
