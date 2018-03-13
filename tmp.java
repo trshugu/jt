@@ -4,6 +4,248 @@ public class tmp {public static void main(String args[]) {
 */
 
 
+
+
+/*
+public class tmp {public static void main(String args[]) {
+  java.util.LinkedList<String> linked = new java.util.LinkedList<String>();
+  linked.add("i");
+  linked.add("ro");
+  linked.add("ha");
+  linked.add("ni");
+  linked.add("h");
+  
+  String record_xxx = linked.getFirst();
+  linked.removeFirst();
+  System.out.println(record_xxx);
+  
+  System.out.println(linked);
+}}
+
+*/
+
+
+
+/*
+public class tmp {
+// ランダムな小英数字を指定文字数返却する
+public static String random(Integer i)
+{
+  java.util.Random rnd =new java.util.Random();
+  java.lang.StringBuffer res = new java.lang.StringBuffer();
+  String list = "0123456789abcdefghijklmnopqrstuvwxyz";
+  
+  for (int j = 0; j < i; j++)
+  {
+    res.append(list.charAt(rnd.nextInt( list.length() )));
+  }
+  
+  return res.toString();
+}
+
+public static void main(String args[]) {
+  
+  try
+  {
+    java.io.FileWriter lsf = new java.io.FileWriter("./lsf.txt", true);
+    java.io.PrintWriter lspw = new java.io.PrintWriter(new java.io.BufferedWriter(lsf));
+    
+    // ===============
+    long start = System.currentTimeMillis();
+    
+    
+    int roop = 1;
+    while (roop < 10000)
+    {
+      System.out.println("今" + roop);
+      long startroop = System.currentTimeMillis();
+      
+      java.util.LinkedList<String> linked = new java.util.LinkedList<String>();
+      
+      int cnt = 0;
+      while (cnt < roop)
+      {
+        linked.add(random(64));
+        cnt++;
+      }
+      
+      for (int i = 0; i < linked.size(); i++)
+      {
+          String record_xxx = linked.getFirst();
+          linked.removeFirst();
+      }
+      
+      long endroop = System.currentTimeMillis();
+      long isbroop = endroop - startroop;
+      lspw.println(isbroop);
+      
+      roop++;
+    }
+    
+    
+    long end = System.currentTimeMillis();
+    long isb = end - start;
+    
+    System.out.println("かかった時間：  " + isb);
+    // ===============
+    lspw.close();
+  }
+  catch (java.io.IOException e)
+  {
+    e.printStackTrace();
+  }
+  
+}}
+
+*/
+
+/*
+
+public class tmp {
+// ランダムな小英数字を指定文字数返却する
+public static String random(Integer i)
+{
+  java.util.Random rnd =new java.util.Random();
+  java.lang.StringBuffer res = new java.lang.StringBuffer();
+  String list = "0123456789abcdefghijklmnopqrstuvwxyz";
+  
+  for (int j = 0; j < i; j++)
+  {
+    res.append(list.charAt(rnd.nextInt( list.length() )));
+  }
+  
+  return res.toString();
+}
+
+public static void main(String args[]) {
+  
+  try
+  {
+    java.io.FileWriter lsf = new java.io.FileWriter("./lsf.txt", true);
+    java.io.PrintWriter lspw = new java.io.PrintWriter(new java.io.BufferedWriter(lsf));
+    
+    // ===============
+    long start = System.currentTimeMillis();
+    
+    
+    int roop = 1;
+    while (roop < 10000)
+    {
+      System.out.println("今" + roop);
+      long startroop = System.currentTimeMillis();
+      
+      java.util.LinkedList<String> linked = new java.util.LinkedList<String>();
+      
+      int cnt = 0;
+      while (cnt < roop)
+      {
+        linked.add(random(64));
+        cnt++;
+      }
+      
+      // int i = 0;
+      for (String record: linked)
+      // for (int i = 0; i < linked.size(); i++)
+      {
+          // String record = linked.get(i);
+          String record_xxx = record;
+          //i++;
+      }
+      long endroop = System.currentTimeMillis();
+      long isbroop = endroop - startroop;
+      lspw.println(isbroop);
+      
+      roop++;
+    }
+    
+    
+    long end = System.currentTimeMillis();
+    long isb = end - start;
+    
+    System.out.println("かかった時間：  " + isb);
+    // ===============
+    lspw.close();
+  }
+  catch (java.io.IOException e)
+  {
+    e.printStackTrace();
+  }
+  
+}}
+*/
+
+
+/*
+public class tmp {
+// ランダムな小英数字を指定文字数返却する
+public static String random(Integer i)
+{
+  java.util.Random rnd =new java.util.Random();
+  java.lang.StringBuffer res = new java.lang.StringBuffer();
+  String list = "0123456789abcdefghijklmnopqrstuvwxyz";
+  
+  for (int j = 0; j < i; j++)
+  {
+    res.append(list.charAt(rnd.nextInt( list.length() )));
+  }
+  
+  return res.toString();
+}
+
+public static void main(String args[]) {
+  java.lang.management.ThreadMXBean th = java.lang.management.ManagementFactory.getThreadMXBean();
+  
+  try
+  {
+    java.io.FileWriter lsf = new java.io.FileWriter("./lsf.txt", true);
+    java.io.PrintWriter lspw = new java.io.PrintWriter(new java.io.BufferedWriter(lsf));
+    
+    // ===============
+    long start = System.currentTimeMillis();
+    java.util.LinkedList<String> linked = new java.util.LinkedList<String>();
+    
+    int cnt = 0;
+    while (cnt < 10000)
+    {
+      linked.add(random(64));
+      cnt++;
+    }
+    // System.out.println(linked);
+    
+    int i = 0;
+    for (String record: linked)
+    //for (int i = 0; i < linked.size(); i++)
+    {
+        long startroop = System.nanoTime();
+        //String record = linked.get(i);
+        //System.out.println(record);
+        //String record_xxx = record;
+        String record_xxx = linked[1];
+        long endroop = System.nanoTime();
+        long isbroop = endroop - startroop;
+        lspw.println(isbroop);
+        i++;
+    }
+    
+    
+    
+    long end = System.currentTimeMillis();
+    long isb = end - start;
+    System.out.println("かかった時間：  " + isb);
+    // ===============
+    lspw.close();
+  }
+  catch (java.io.IOException e)
+  {
+    e.printStackTrace();
+  }
+  
+}}
+*/
+
+
+
+
 /*
 import java.util.*;
 
